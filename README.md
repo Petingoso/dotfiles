@@ -12,6 +12,7 @@ It has
 
 -terminal is kitty and integrated with the theme switcher
  
+ check the app integrated .local/bin, for the keybinds
   
 
 # I think it looks really cool but most of it is stolen so credits to
