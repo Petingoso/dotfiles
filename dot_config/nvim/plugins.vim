@@ -1,0 +1,59 @@
+"""""""""
+"PLUGINS"
+"""""""""
+" Specify a directory for plugins
+" - For Neovim: stdpath('data') . '/plugged'
+" - Avoid using standard Vim directory names like 'plugin'
+call plug#begin(stdpath('data') . '/plugged')
+
+"Themes
+Plug 'SmiteshP/nvim-gps'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'srcery-colors/srcery-vim'
+Plug 'frazrepo/vim-rainbow' "Colored Brackets, pretty cool
+Plug 'ap/vim-css-color' " CSS Color Preview #000000
+Plug 'glepnir/dashboard-nvim' "Dashboard screen
+
+"Appearance and stuff
+Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'} "File manager
+Plug 'voldikss/vim-floaterm' "Cool for the execution of code
+Plug 'vimlab/split-term.vim' "Better terminal
+Plug 'tc50cal/vim-terminal' " Vim Terminal
+Plug 'camspiers/lens.vim' "Resize windwos smartly
+Plug 'kyazdani42/nvim-web-devicons' " Developer Icons
+Plug 'tribela/vim-transparent'
+
+"Writing and Formating
+Plug 'junegunn/fzf.vim' "For pop menus
+Plug 'tpope/vim-commentary' "For quick commentary 
+Plug 'qaiviq/vim-tiler' "Tiling
+Plug 'zhamlin/tiler.vim' "See above
+Plug 'jiangmiao/auto-pairs' "For double quotes, paretheses and stuff
+Plug 'tpope/vim-surround' " Surrounding and changing paretheses n stuff
+Plug 'vim-scripts/restore_view.vim' "for remebering session
+Plug 'chentau/marks.nvim' "Better marks
+Plug 'booperlv/nvim-gomove' "moving lines pog
+"copilot
+" Plug 'github/copilot.vim'
+
+"LSP
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+" For luasnip users.
+Plug 'L3MON4D3/LuaSnip'
+Plug 'saadparwaiz1/cmp_luasnip'
+
+"VS pictograms
+Plug 'onsails/lspkind.nvim'
+
+"Other
+Plug 'nvim-treesitter/nvim-treesitter' "Treesitter 
+Plug 'liuchengxu/vim-which-key' "To remember binds
+call plug#end()
+
