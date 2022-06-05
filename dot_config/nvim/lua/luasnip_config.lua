@@ -1,11 +1,12 @@
 local ls = require("luasnip")
+require("luasnip.loaders.from_vscode").lazy_load()
 ls.config.set_config({
   history = true,
   updateevents = "TextChanged,TextChangedI",
 })
 
 vim.cmd([[
-imap <silent><expr> <c-k> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<c-k>'
+imap <silent><expr> <c-Space> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<c-k>'
 inoremap <silent> <c-j> <cmd>lua require('luasnip').jump(-1)<CR>
 
 imap <silent><expr> <Tab> luasnip#choice_active() ? '<Plug>luasnip-next-choice' : '<Tab>' 

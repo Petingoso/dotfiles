@@ -8,12 +8,12 @@ cmp.setup({
     ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
     ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
     ["<C-e>"] = cmp.mapping.close(),
-    ["<TAB>"] = cmp.mapping(cmp.mapping.select_next_item()),
-    ["<s-TAB>"] =cmp.mapping(cmp.mapping.select_prev_item()),
-	["<CR>"] = cmp.mapping({
+    ["<C-Space>"] = cmp.mapping({
       i = cmp.mapping.confirm({ select = true }),
     }),
-	["<C-Space>"] = cmp.mapping({
+    ["<TAB>"] = cmp.mapping(cmp.mapping.select_next_item()),
+    ["<S-TAB>"] = cmp.mapping(cmp.mapping.select_prev_item()),
+    ["<CR>"] = cmp.mapping({
       i = cmp.mapping.confirm({ select = true }),
     }),
   },

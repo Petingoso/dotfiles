@@ -22,9 +22,11 @@ Plug 'tc50cal/vim-terminal' " Vim Terminal
 Plug 'camspiers/lens.vim' "Resize windwos smartly
 Plug 'kyazdani42/nvim-web-devicons' " Developer Icons
 Plug 'tribela/vim-transparent'
+Plug 'fladson/vim-kitty'
+Plug 'folke/todo-comments.nvim'
 
 "Writing and Formating
-Plug 'junegunn/fzf.vim' "For pop menus
+" Plug 'junegunn/fzf.vim' "For pop menus
 Plug 'tpope/vim-commentary' "For quick commentary 
 Plug 'qaiviq/vim-tiler' "Tiling
 Plug 'zhamlin/tiler.vim' "See above
@@ -45,15 +47,24 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-omni'
+Plug 'hrsh7th/cmp-calc'
 " For luasnip users.
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
+Plug 'rafamadriz/friendly-snippets'
 
 "VS pictograms
 Plug 'onsails/lspkind.nvim'
 
+"Telescope
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-ui-select.nvim'
+Plug 'nvim-lua/plenary.nvim'
 "Other
 Plug 'nvim-treesitter/nvim-treesitter' "Treesitter 
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'liuchengxu/vim-which-key' "To remember binds
 call plug#end()
 
