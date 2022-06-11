@@ -5,6 +5,7 @@ ls.config.set_config({
   updateevents = "TextChanged,TextChangedI",
 })
 
+
 vim.cmd([[
 imap <silent><expr> <c-Space> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<c-k>'
 inoremap <silent> <c-j> <cmd>lua require('luasnip').jump(-1)<CR>
@@ -110,6 +111,7 @@ au User LuasnipChoiceNodeLeave lua Choice_popup_close()
 au User LuasnipChangeChoice lua Update_choice_popup(require("luasnip").session.event_node)
 augroup END
 ]])
+
 
 ls.add_snippets("html", require("snippets/html"))
 ls.add_snippets("c", require("snippets/c"))

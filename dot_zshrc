@@ -113,7 +113,7 @@ alias gg='cd $(fzfz)'
 alias v='nvim'
 alias bottles='flatpak run com.usebottles.bottles'
 alias fightcade2='flatpak run com.fightcade.Fightcade' 
-
+alias make='make -j$(nproc)'
 
 export HDDMAIN="/media/petarch/HDDMAIN/"
 export EDITOR='vim'
