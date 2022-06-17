@@ -16,7 +16,7 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 nnoremap <C-t> :CHADopen<CR>
 
 "Execute program on Ctrl X
-nnoremap <C-x> :FloatermNew --autoclose=0 gcc % -o /tmp/compiled.out && /tmp/compiled.out<CR>
+nnoremap <C-b> :FloatermNew --autoclose=0 gcc % -o /tmp/compiled.out && /tmp/compiled.out<CR>
 
 "Source VIMRC while on vim
 nnoremap <C-p> :source $MYVIMRC<CR>

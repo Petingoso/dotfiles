@@ -3,8 +3,9 @@ setxkbmap pt
 xrdb merge ~/.Xresources &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 pcloud &
-deadd-notification-center & 
+# deadd-notification-center & 
 doas /bin/acpid -f &
+xss-lock slock &
 # run bar script and dwm ( never remove this )
 picom --experimental-backends &
 dbus-launch --exit-with-session dwm

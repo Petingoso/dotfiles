@@ -29,7 +29,13 @@ let g:python3_host_prog = '/usr/bin/python3'
 
 colorscheme srcery
 let g:rainbow_active = 1
+set dictionary+=/usr/share/dict/words
+set complete+=k
+set spell spelllang=en,pt
+set spellsuggest=best,9
 
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
 
 :lua << EOF
 local lsp_installer = require("nvim-lsp-installer")

@@ -15,7 +15,7 @@ widget = luastatus.require_plugin('battery-linux').widget{
             rem_seg = string.format('%2dh %02dm', h, m)
         end
         return {
-            string.format(color.sep .. color.btt_ic_fg .. color.btt_ic_bg .. ' %s ' .. color.btt_fg .. color.btt_bg .. ' %3d%% ', symbol, t.capacity),
+            string.format(color.sep .. color.btt_ic_fg .. color.btt_ic_bg .. ' %s ' .. color.btt_fg .. color.btt_bg .. '%3d%% ', symbol, t.capacity),
             rem_seg,
         }
     end,

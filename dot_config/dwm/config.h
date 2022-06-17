@@ -129,8 +129,8 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 static const char font[]                 = "monospace 10";
 #else
 static const char *fonts[]               = {
-	//"JetBrainsMono Nerd Font Mono:style=Medium:size=13",
-	"Iosevka Nerd Font Mono:style=Medium:size=13",
+	"JetBrainsMono Nerd Font Mono:style=Medium:size=13",
+	//"Iosevka Nerd Font Mono:style=Medium:size=13",
 	//"FantasqueSansMono Nerd Font:size=15",
 	//"Hack Nerd Font:style:medium:size=14",
 	//"Comfortaa:size=15",
@@ -376,7 +376,7 @@ static const char *const autostart[] = {
 	"zsh", ".fehbg", NULL,
 	"deadd-notification-center", NULL,
 	"sxhkd", NULL,
-	"luastatus", "-b", "dwm", "-B", "separator=", ".config/dwm/luastatus/module/backlight.lua", ".config/dwm/luastatus/module/alsa.lua", ".config/dwm/luastatus/module/battery.lua", ".config/dwm/luastatus/module/wifi.lua", ".config/dwm/luastatus/module/mem-usage.lua", ".config/dwm/luastatus/module/time-date.lua", NULL,
+	"luastatus", "-b", "dwm", "-B", "separator=", ".config/dwm/luastatus/module/backlight.lua", ".config/dwm/luastatus/module/alsa.lua", ".config/dwm/luastatus/module/battery.lua", ".config/dwm/luastatus/module/wifi.lua", ".config/dwm/luastatus/module/time-date.lua", NULL,
 	NULL /* terminate */
 };
 #endif // COOL_AUTOSTART_PATCH
@@ -418,7 +418,7 @@ static Sp scratchpads[] = {
  */
 static char *tagicons[][NUMTAGS] = {
 	/* [DEFAULT_TAGS]        = { "", "", "", "ﮑ", "龎", "ﮠ", "", "煉", "" }, */
-	[DEFAULT_TAGS]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+	[DEFAULT_TAGS]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }, 
 	[ALTERNATIVE_TAGS]    = { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
 	[ALT_TAGS_DECORATION] = { "<1>", "<2>", "<3>", "<4>", "<5>", "<6>", "<7>", "<8>", "<9>" },
 };

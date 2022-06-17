@@ -98,7 +98,7 @@ endfunction
 
 nnoremap <C-p> :Files<CR>
 nnoremap <C-y> :Windows<CR>
-nnoremap <C-b> :Buffers<CR>
+" nnoremap <C-b> :Buffers<CR>
 nnoremap <Leader>ta :lua vim.lsp.buf.code_action()<CR>
 
 " Configure FZF to use a floating window configuration

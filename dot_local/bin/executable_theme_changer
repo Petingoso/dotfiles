@@ -49,16 +49,21 @@ theme_change()
 select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
+		# pkill xwinwrap
 		feh --bg-fill $HOME/.config/wallpaper/pixelart_night_train_cozy_gas.png
 		theme_change cozy-night
 		~/scripts/script.sh Catppuccin-purple
 		;;
 	$theme2)
-		feh --bg-fill $HOME/.config/wallpaper/pixelart_witch_cauldron.png
+		# pkill xwinwrap
+		# xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/Pictures/Backgrounds/gifs/lounge.gif --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
+		feh --bg-fill $HOME/Pictures/Backgrounds/misc/patchy.jpg
 		theme_change cozy-night_warm
 		~/scripts/script.sh Catppuccin-purple
 		;;
 	$theme3)
+		# pkill xwinwrap
+		# xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/Pictures/Backgrounds/gifs/cityhappy.gif --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
 		feh --bg-fill $HOME/.config/wallpaper/pixelart_house_chibi_person_game.png
 		theme_change gruvbox
 		~/scripts/script.sh oomox-srcery

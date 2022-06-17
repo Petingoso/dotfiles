@@ -46,7 +46,7 @@ cmp.setup({
     { name = "path" },
     { name = "calc" },
     { name = "vim-dadbod-completion" },
-  },
+    },
   window = {
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
@@ -111,3 +111,4 @@ cmp.setup.cmdline("?", {
     { name = "buffer" },
   },
 })
+

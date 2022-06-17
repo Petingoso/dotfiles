@@ -66,5 +66,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter' "Treesitter 
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'liuchengxu/vim-which-key' "To remember binds
+Plug 'vim-scripts/AutoComplPop'
 call plug#end()
 
