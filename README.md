@@ -22,8 +22,9 @@ It has
 -https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs
 
 Well not like anyone's gonna read this except but me but that's all folks
+![2022-06-22_13-54](https://user-images.githubusercontent.com/92183955/175034211-b7fcf6a1-c703-457e-bf8c-84f280a60c1b.png)
+
+![2022-06-22_13-55](https://user-images.githubusercontent.com/92183955/175034245-e9417ab9-aeff-416a-b230-d4410f0cadd0.png)
 
 
 
-![2022-06-04_18-08](https://user-images.githubusercontent.com/92183955/172017985-de6f6ab7-b12e-45c7-a16a-60eede427146.png)
-![2022-06-04_18-11](https://user-images.githubusercontent.com/92183955/172017980-70d89c8d-4d67-4ebf-b5d8-42562b8f80c0.png)
