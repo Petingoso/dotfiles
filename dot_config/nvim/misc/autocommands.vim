@@ -1,4 +1,4 @@
-let g:acp_enableStartup=0
+let g:acp_enableAtStartup=0
 augroup omnifuncs
   autocmd!
   autocmd BufNew,BufNewFile,BufRead,BufEnter *.snippets :setfiletype snippets

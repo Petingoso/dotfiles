@@ -81,25 +81,26 @@ alt + shift  + v
 Print
 	flameshot full -p $HOME/Pictures/SS/
 
-# Take a screenshot with gui selection
+# # Take a screenshot with gui selection
 super + Print
 	flameshot gui
 	
-# Take screenshot in 5 second
+# # Take screenshot in 5 second
 alt + Print	
 	flameshot full -d 5000 -p $HOME/Pictures/SS/
 
-# Take screenshot in 10 second
+# # Take screenshot in 10 second
 shift + Print	
 	flameshot full -d 10000 -p $HOME/Pictures/SS/
 
 # Brighness control
-#XF86MonBrightness{Up,Down}
-	#xbacklight{ -inc 5, -dec 5}
+# XF86MonBrightness{Up,Down}
+	# xbacklight{ -inc 5, -dec 5}
 
 #Player ctl
 alt + p
 	playerctl play-pause
+
 XF86MonBrightnessUp
 	brightnessctl set +5%
 
