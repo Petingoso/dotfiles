@@ -27,14 +27,18 @@ Plug 'folke/todo-comments.nvim'
 
 "Writing and Formating
 " Plug 'junegunn/fzf.vim' "For pop menus
+Plug 'folke/tokyonight.nvim'
+Plug 'Mofiqul/dracula.nvim'
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'shaunsingh/nord.nvim'
 Plug 'tpope/vim-commentary' "For quick commentary 
 Plug 'qaiviq/vim-tiler' "Tiling
 Plug 'zhamlin/tiler.vim' "See above
 Plug 'jiangmiao/auto-pairs' "For double quotes, paretheses and stuff
 Plug 'tpope/vim-surround' " Surrounding and changing paretheses n stuff
 Plug 'vim-scripts/restore_view.vim' "for remebering session
-Plug 'chentau/marks.nvim' "Better marks
 Plug 'booperlv/nvim-gomove' "moving lines pog
+Plug 'chentoast/marks.nvim'
 "copilot
 " Plug 'github/copilot.vim'
 

@@ -1,36 +1,23 @@
-#define white   #ebdbb2
-#define black   #282828
-#define black0  #1d2021
-#define gray1   #928374
-#define gray2   #a89984
-#define red1    #cc241d
-#define red2    #fb4934
-#define green1  #98971a
-#define green2  #b8bb26
-#define yellow1 #d79921
-#define yellow2 #fabd2f
-#define blue1   #458488
-#define blue2   #83a598
-#define purple1 #b16286
-#define purple2 #d3869b
-#define aqua1   #689d6a
-#define aqua2   #8ec07c
-#define orange1 #d65d0e
-#define orange2 #fe8019
+#define midnight          #232341
+#define dusk              #484d7f
+#define dark_lavender     #8b6d9c
+#define pinkish_grey      #c69fa5
+#define light_peach       #f2d3ab
+#define very_light_pink   #fbf5ef
 
-dmenu.foreground:				white
-dmenu.background:				black
+dmenu.foreground:				very_light_pink
+dmenu.background:				midnight
 
-dmenu.selforeground:		black
-dmenu.selbackground:		green1
+dmenu.selforeground:		midnight
+dmenu.selbackground:		pinkish_grey
 
-dmenu.outforeground:		red1
-dmenu.outbackground:		black
+dmenu.outforeground:		dusk
+dmenu.outbackground:		midnight
 
-dmenu.bordercolor:			orange2
+dmenu.bordercolor:			dark_lavender
 
-dmenu.selhlforeground:	orange1
-dmenu.selhlbackground:	green1
+dmenu.selhlforeground:	light_peach
+dmenu.selhlbackground:	pinkish_grey
 
-dmenu.hlforeground:			orange1
-dmenu.hlbackground:			black
+dmenu.hlforeground:			dark_lavender
+dmenu.hlbackground:			midnight

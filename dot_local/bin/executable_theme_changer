@@ -17,11 +17,12 @@ dwm_pid="$(pidof dwm)"
 # Theme
 cancel="窱 Cancel"
 theme1=" Cozy-Night"
-theme2=" Cozy-Night(Warm Color)"
+theme2=" Dracula"
 theme3=" Gruvbox"
+theme4=" Nord"
 
 # Variable to pass to dmenu or rofi
-option="$cancel\n$theme1\n$theme2\n$theme3"
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4"
 
 
 theme_change()
@@ -30,10 +31,26 @@ theme_change()
 	cp ${dmenu_dir}/theme_xresources/$1 ${dmenu_dir}/theme_xresources/theme
 	cp ${dwm_luastatus_dir}/$1.lua ${dwm_luastatus_dir}/color.lua
 	
-	# cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
+	cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
 	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
 	cp ${zathura_dir}/theme/$1 ${zathura_dir}/theme.color
+if [[ "$1" == "cozy-night" ]]; then
+    # vim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme tokyonight/}" .vimrc
+		sed -i "0,/'colorscheme'/{s/\('colorscheme':\)\(.*\)/\ 'colorscheme': 'tokyonight',/}" .vimrc
 
+    # nvim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme tokyonight/}" ~/.config/nvim/settings.vim
+		sed "s/theme = '[^']*'/theme = 'tokyonight'/g" -i .config/nvim/lua/lualine_config.lua
+	else
+    # vim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme $1/}" .vimrc
+		sed -i "s/\('colorscheme':\)\(.*\)/'colorscheme': '$1',/" .vimrc
+
+    # nvim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme $1/}" ~/.config/nvim/settings.vim
+		sed "s/theme = '[^']*'/theme = '$1'/g" -i .config/nvim/lua/lualine_config.lua
+	fi
 	#make -s -C ${dwm_dir} clean
 	#bash $HOME/.bin/sudo_passhelper make -s -C ${dwm_dir} install
 	#make -s -C ${dwm_dir} clean
@@ -41,30 +58,41 @@ theme_change()
 	xrdb -merge -I$HOME ~/.Xresources # reload Xresources
 	kill -HUP dwmpid $dwm_pid # restart dwm
 
+  # calls xrdb function in dwm
+  xsetroot -name "fsignal:2"
+  # update luastatus
+  # kill -9 $(pidof luastatus)
+
 	#make -s -C ${dwm_dir}/dmenu clean
 	#bash $HOME/.bin/sudo_passhelper make -s -C ${dmenu_dir} install
 	#make -s -C ${dmenu_dir} clean
+}
+chgtk() {
+   sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i ~/.config/gtk-3.0/settings.ini
+   sed -e "s/^gtk-theme-name=.*/gtk-theme-name=\""$@"\"/" -i ~/.gtkrc-2.0 
+
 }
 
 select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
-		# pkill xwinwrap
-		feh --bg-fill $HOME/.config/wallpaper/pixelart_night_train_cozy_gas.png
+		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_fantasy_whale_flying_building.png
 		theme_change cozy-night
-		~/scripts/script.sh Catppuccin-purple
+		chgtk TokyoNight
 		;;
 	$theme2)
-		# pkill xwinwrap
-		# xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/Pictures/Backgrounds/gifs/lounge.gif --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
-		feh --bg-fill $HOME/Pictures/Backgrounds/misc/patchy.jpg
-		theme_change cozy-night_warm
-		~/scripts/script.sh Catppuccin-purple
+		feh --bg-fill /home/petartix/Pictures/Backgrounds/arch/Artix.png
+		theme_change dracula
+		chgtk Dracula
 		;;
 	$theme3)
-		# pkill xwinwrap
-		# xwinwrap -ov -g 1920x1080+0+0 -- mpv -wid WID ~/Pictures/Backgrounds/gifs/cityhappy.gif --no-osc --no-osd-bar --loop-file --player-operation-mode=cplayer --no-audio --panscan=1.0 --no-input-default-bindings &
-		feh --bg-fill $HOME/.config/wallpaper/pixelart_house_chibi_person_game.png
+		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_house_inside_girl_book_dog.png
 		theme_change gruvbox
-		~/scripts/script.sh oomox-srcery
-esac
+		chgtk Gruvbox-Material-Dark
+		;;
+	$theme4)
+		feh --bg-fill $HOME/.config/wallpaper/pixelart_medicine_flower_reminder_nord.png
+		theme_change nord
+		chgtk Nordic
+		;;
+	esac

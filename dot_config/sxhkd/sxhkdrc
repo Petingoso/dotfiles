@@ -102,11 +102,9 @@ alt + p
 	playerctl play-pause
 
 XF86MonBrightnessUp
-	brightnessctl set +5%
-
+	light -A 10.2
 XF86MonBrightnessDown
-	brightnessctl set 5%-
-
+	light -T 0.63
 	
 # Volume control
 XF86AudioRaiseVolume
