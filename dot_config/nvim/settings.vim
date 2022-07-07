@@ -27,7 +27,7 @@ let g:python_host_prog  = 'usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 
 
-colorscheme dracula
+colorscheme gruvbox
 let g:rainbow_active = 1
 set dictionary+=/usr/share/dict/words
 set complete+=k

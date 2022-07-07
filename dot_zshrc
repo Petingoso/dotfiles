@@ -111,10 +111,8 @@ alias fzfz='~/.local/share/zinit/plugins/andrewferrier---fzf-z/fzfz'
 alias gg='cd $(fzfz)'
 alias v='nvim'
 alias make='make -j$(nproc)'
-alias wine='prime wine'
 alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ && LANG=ja_JP.UTF-8 wine thprac\ v2.0.8.3.exe"
 
-eval $(thefuck --alias)
 
 export HDDMAIN="/media/petarch/HDDMAIN/"
 export EDITOR='nvim'
@@ -139,5 +137,20 @@ export PATH="$PATH:$HOME/.local/bin:/usr/local/bin/"
 #########################
 #AND THAT'S ALL
 chtheme() {
-   sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i ~/.gtkrc-2.0 ~/.config/gtk-3.0/settings.ini
+   sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i ~/.gtkrc-2.0 ~/.config/gtk-3.0/settings.init
+}
+
+fuck () {
+TF_PYTHONIOENCODING=$PYTHONIOENCODING 
+export TF_SHELL=zsh 
+export TF_ALIAS=fuck 
+TF_SHELL_ALIASES=$(alias) 
+export TF_SHELL_ALIASES
+TF_HISTORY="$(fc -ln -10)" 
+export TF_HISTORY
+export PYTHONIOENCODING=utf-8 
+TF_CMD=$( thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@ )  && eval $TF_CMD
+unset TF_HISTORY
+export PYTHONIOENCODING=$TF_PYTHONIOENCODING 
+test -n "$TF_CMD" && print -s $TF_CMD
 }
