@@ -8,7 +8,7 @@ end]]
 require("lualine").setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
+    theme = 'nord',
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
     disabled_filetypes = {},
@@ -48,8 +48,8 @@ require("lualine").setup({
   tabline = {
     lualine_a = { {
       "tabs",
-      max_length = vim.o.columns / 2,
-      mode = 2,
+      max_length = vim.o.columns / 1,
+      mode = 1,
     } },
     lualine_b = {},
     lualine_c = {},

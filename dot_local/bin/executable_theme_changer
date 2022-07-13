@@ -61,7 +61,7 @@ if [[ "$1" == "cozy-night" ]]; then
   # calls xrdb function in dwm
   xsetroot -name "fsignal:2"
   # update luastatus
-  # kill -9 $(pidof luastatus)
+   kill -9 $(pidof luastatus)
 
 	#make -s -C ${dwm_dir}/dmenu clean
 	#bash $HOME/.bin/sudo_passhelper make -s -C ${dmenu_dir} install
@@ -76,7 +76,7 @@ chgtk() {
 select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
-		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_fantasy_whale_flying_building.png
+		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_night_train_cozy_gas_warm-color.png 
 		theme_change cozy-night
 		chgtk TokyoNight
 		;;
@@ -91,7 +91,7 @@ case $select in
 		chgtk Gruvbox-Material-Dark
 		;;
 	$theme4)
-		feh --bg-fill $HOME/.config/wallpaper/pixelart_medicine_flower_reminder_nord.png
+		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_fantasy_whale_flying_building.png
 		theme_change nord
 		chgtk Nordic
 		;;

@@ -1,12 +1,13 @@
 #!/bin/sh
 setxkbmap pt
-xrdb merge ~/.Xresources &
+xrdb -merge -I$HOME ~/.Xresources # reload Xresources
+export QT_QPA_PLATFORMTHEME="qt5ct"
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 pcloud &
 # deadd-notification-center & 
 xss-lock slock &
 picom --experimental-backends &
-/usr/bin/prime-offload
-optimus-manager-qt &
+# /usr/bin/prime-offload
+# optimus-manager-qt &
 dbus-launch --exit-with-session dwm
-doas /usr/bin/prime-switch
+# doas /usr/bin/prime-switch
