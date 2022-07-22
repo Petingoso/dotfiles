@@ -1,9 +1,9 @@
-#define midnight 					#2b2337
-#define dusk 							#524d68
-#define dark_lavender 		#9b6c81
-#define pinkish_grey 			#dc9e89
-#define light_peach 			#ffd28e
-#define very_light_pink 	#fff4c7
+#define midnight 					#232341
+#define dusk 							#484d7f
+#define dark_lavender 		#8b6d9c
+#define pinkish_grey 			#c69fa5
+#define light_peach 			#f2d3ab
+#define very_light_pink 	#fbf5ef
 
 dwm.normfgcolor                : dark_lavender
 dwm.normbgcolor                : midnight
@@ -42,5 +42,5 @@ dwm.hidselbgcolor              : midnight
 
 dwm.urgfgcolor								 : midnight
 dwm.urgbgcolor								 : light_peach
-dwm.urgbordercolor						 : pinkish_grey
+dwm.urgbordercolor						 : light_peach
 dwm.urgfloatcolor							 : pinkish_grey

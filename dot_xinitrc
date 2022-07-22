@@ -7,7 +7,9 @@ pcloud &
 # deadd-notification-center & 
 xss-lock slock &
 picom --experimental-backends &
+touchegg &
 # /usr/bin/prime-offload
 # optimus-manager-qt &
 dbus-launch --exit-with-session dwm
+# dbus-launch --exit-with-session gnome-shell --x11
 # doas /usr/bin/prime-switch

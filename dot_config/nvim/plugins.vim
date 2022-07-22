@@ -27,6 +27,7 @@ Plug 'folke/todo-comments.nvim'
 
 "Writing and Formating
 " Plug 'junegunn/fzf.vim' "For pop menus
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'folke/tokyonight.nvim'
 Plug 'Mofiqul/dracula.nvim'
 Plug 'ellisonleao/gruvbox.nvim'
