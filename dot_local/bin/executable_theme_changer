@@ -1,0 +1,86 @@
+#!/usr/bin/env bash
+
+# Directory
+dwm_dir="$HOME/.config/dwm"
+dmenu_dir="$HOME/.config/dmenu"
+dwm_luastatus_dir="$HOME/.config/dwm/luastatus/colorscheme"
+alacritty_dir="$HOME/.config/alacritty"
+kitty_dir="$HOME/.config/kitty"
+zathura_dir="$HOME/.config/zathura"
+
+prompt="dmenu -l 9 "
+#prompt="rofi -dmenu"
+
+# for restarting dwm
+dwm_pid="$(pidof dwm)"
+
+# Theme
+cancel="窱 Cancel"
+theme1=" Catppuccin (Macchiato)"
+theme2=" Cozy-Night"
+theme3=" Dracula"
+theme4=" Gruvbox"
+theme5=" Nord"
+
+# Variable to pass to dmenu or rofi
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5"
+
+
+change_theme()
+{
+	cp ${dwm_dir}/theme_xresources/$1 ${dwm_dir}/theme_xresources/theme
+	cp ${dmenu_dir}/theme_xresources/$1 ${dmenu_dir}/theme_xresources/theme
+	cp ${dwm_luastatus_dir}/$1.lua ${dwm_luastatus_dir}/color.lua
+	cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
+	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
+	cp ${zathura_dir}/theme/$1 ${zathura_dir}/theme.color
+if [[ "$1" == "cozy-night" ]]; then
+	# nvim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme dark_purple/}" ~/.config/nvim/settings.vim
+		sed "s/theme = '[^']*'/theme = 'dracula'/g" -i .config/nvim/lua/lualine_config.lua
+elif [[ "$1" == "catppuccin_macchiato" ]]; then
+	# nvim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme catppuccin}" ~/.config/nvim/settings.vim
+		sed "s/theme = '[^']*'/theme = 'catppuccin'/g" -i .config/nvim/lua/lualine_config.lua
+	else
+    # nvim
+		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme $1/}" ~/.config/nvim/settings.vim
+		sed "s/theme = '[^']*'/theme = '$1'/g" -i .config/nvim/lua/lualine_config.lua
+	fi
+	xrdb -merge -I$HOME ~/.Xresources # reload Xresources
+	kill -HUP dwmpid $dwm_pid # restart dwm
+}
+change_gtk_theme() 
+{
+   sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i ~/.config/gtk-3.0/settings.ini
+   sed -e "s/^gtk-theme-name=.*/gtk-theme-name=\""$@"\"/" -i ~/.gtkrc-2.0 
+}
+
+select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
+case $select in
+	$theme1)
+		feh --bg-fill --randomize $HOME/.config/wallpaper/pixelart_night_stars_clouds_trees_cozy_PixelArtJourney.png $HOME/.config/wallpaper/pixelart_evening_trees_pole_wires_makrustic.png
+		change_theme catppuccin_macchiato
+    change_gtk_theme Catppuccin-purple 
+		;;
+	$theme2)
+		feh --bg-fill /home/petartix/.config/wallpaper/dark-cat.png 
+		change_theme cozy-night
+		change_gtk_theme TokyoNight
+		;;
+	$theme3)
+		feh --bg-fill /home/petartix/Pictures/Backgrounds/arch/Artix.png
+		change_theme dracula
+		change_gtk_theme Dracula
+		;;
+	$theme4)
+		feh --bg-fill /home/petartix/.config/wallpaper/pixelart_house_inside_girl_book_dog.png
+		change_theme gruvbox
+		change_gtk_theme Gruvbox-Material-Dark
+		;;
+	$theme5)
+		feh --bg-fill /home/petartix/.config/wallpaper/mist_forest_nord.jpg
+		change_theme nord
+		change_gtk_theme Nordic
+		;;
+	esac

@@ -1,0 +1,94 @@
+/*all.css*/
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Ubuntu Mono Nerd Font;
+  font-size: 18px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+tooltip {
+  background: #232323;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #202020;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: #434343;
+  margin-right: 5px;
+}
+
+#workspaces button.active {
+  color: #dedede;
+}
+
+#workspaces button.focused {
+  color: #dedede;
+  background-color: #c49ec4;
+  border-radius: 10px;
+}
+
+#workspaces button.urgent {
+  color: #0f0f0f;
+  background-color: #9ec3c4;
+  border-radius: 10px;
+}
+
+#workspaces button:hover {
+  background-color: #ffffff;
+  color: #232323;
+  border-radius: 10px;
+}
+
+#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification{
+  background-color: transparent;
+  padding: 3px 10px;
+  margin: 3px 0px;
+}
+
+#tray {
+  border-radius: 10px;
+  margin-right: 4px;
+}
+
+#workspaces {
+  background-color: transparent;
+  border-radius: 10px;
+  padding-right: 5px;
+}
+
+#clock {
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+#network {
+  color: #fab387;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#pulseaudio {
+  color: #588cd3;
+}
+
+#battery{
+  color:  #58d3a4;
+  border-radius: 0 10px 10px 0;
+}
+
+#backlight{
+  color: #a51a9a;
+}
+
+#custom-notification{
+	color: #ffffff;
+}
+
