@@ -7,6 +7,7 @@ dwm_luastatus_dir="$HOME/.config/dwm/luastatus/colorscheme"
 alacritty_dir="$HOME/.config/alacritty"
 kitty_dir="$HOME/.config/kitty"
 rofi_dir="$HOME/.config/rofi/colors"
+nvim_settings="$HOME/.config/nvim/lua/settings.lua"
 
 # prompt="dmenu -l 9 "
 prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi"
@@ -34,18 +35,18 @@ change_theme()
 	cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
 	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
 	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
+	sed -i "s/\(colorscheme \)\(.*\)/\1$1]]/" $nvim_settings
+
 if [[ "$1" == "cozy-night" ]]; then
 	# nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme dark_purple/}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = 'dracula'/g" -i .config/nvim/lua/lualine_config.lua
+	sed -i 's/\(colorscheme \)\(.*\)/\1tokyonight-night]]/' $nvim_settings
+
 elif [[ "$1" == "catppuccin_macchiato" ]]; then
 	# nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme catppuccin}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = 'catppuccin'/g" -i .config/nvim/lua/lualine_config.lua
+	sed -i 's/\(colorscheme \)\(.*\)/\1catppuccin]]/' $nvim_settings
+
 	else
     # nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme $1/}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = '$1'/g" -i .config/nvim/lua/lualine_config.lua
 	fi
 	xrdb -merge -I$HOME ~/.Xresources # reload Xresources
 	kill -HUP dwmpid $dwm_pid # restart dwm

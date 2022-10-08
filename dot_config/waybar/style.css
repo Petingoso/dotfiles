@@ -1,14 +1,14 @@
-/*nord.css*/
+/*all.css*/
 * {
   border: none;
   border-radius: 0;
-  font-family: JetBrains Mono Nerd Font;
+  font-family: Jetbrains Mono Nerd Font;
   font-size: 18px;
   min-height: 0;
 }
 
 window#waybar {
-  background: 000000;
+  background: transparent;
   color: white;
 }
 
@@ -22,12 +22,12 @@ tooltip {
 
 #workspaces button {
   padding: 5px;
-  color: #dedede;
+  color: #434343;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  color: #000000;
+  color: #dedede;
 }
 
 #workspaces button.focused {
@@ -43,12 +43,12 @@ tooltip {
 }
 
 #workspaces button:hover {
-  background-color: #1e1e2e;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #232323;
   border-radius: 10px;
 }
 
-#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification {
+#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification{
   background-color: transparent;
   padding: 3px 10px;
   margin: 3px 0px;
@@ -66,7 +66,7 @@ tooltip {
 }
 
 #clock {
-  color: #000000;
+  color: #ffffff;
   border-radius: 10px;
 }
 
@@ -89,7 +89,7 @@ tooltip {
 }
 
 #custom-notification{
-	color: #000000;
+	color: #ffffff;
 	margin-right: 15px;
 }
 
