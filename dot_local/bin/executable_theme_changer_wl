@@ -57,7 +57,7 @@ select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/evening-sky.png &
+		swaybg -m fill -i $HOME/.config/wallpaper/cat-waves.png &
 		change_theme catppuccin_macchiato
 		change_gtk_theme Catppuccin-purple 
 		$HOME/scripts/gtk2gsetting.sh
