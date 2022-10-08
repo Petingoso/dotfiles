@@ -19,7 +19,7 @@ local conds = require("luasnip.extras.expand_conditions")
 
 local snip = {
   -- trigger is fn.
-  s({ trig = "urmom", dscr = "Basic html template", name = "DOCTYPE" }, {
+  s({ trig = "htmlbsc", dscr = "Basic html template", name = "DOCTYPE" }, {
     t({
       "<!DOCTYPE html>",
       '<html lang="en">',
