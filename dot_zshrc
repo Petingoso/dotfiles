@@ -99,6 +99,7 @@ alias bat="bat --theme=gruvbox-dark"
 alias fzfz='~/.local/share/zinit/plugins/andrewferrier---fzf-z/fzfz'
 alias gg='cd $(fzfz)'
 alias v='nvim'
+alias vc='nvim ~/Coding'
 alias make='make -j$(nproc)'
 alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ && LANG=ja_JP.UTF-8 wine thprac\ v2.0.8.3.exe"
 

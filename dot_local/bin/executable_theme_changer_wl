@@ -5,6 +5,7 @@ hypr_dir="$HOME/.config/hypr/themes"
 rofi_dir="$HOME/.config/rofi/colors"
 kitty_dir="$HOME/.config/kitty"
 waybar_dir="$HOME/.config/waybar"
+nvim_chadrc="$HOME/.config/nvim/lua/custom/chadrc.lua"
 
 # prompt="dmenu -l 9 "
 prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi"
@@ -30,26 +31,28 @@ change_theme()
 
 if [[ "$1" == "cozy-night" ]]; then
 	# nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme dark_purple/}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = 'dracula'/g" -i .config/nvim/lua/lualine_config.lua
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = 'tokyonight'/}" $nvim_chadrc
 
 elif [[ "$1" == "catppuccin_macchiato" ]]; then
 	# nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme catppuccin}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = 'catppuccin'/g" -i .config/nvim/lua/lualine_config.lua
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = 'catppuccin'/}" $nvim_chadrc
 
-	else
-    # nvim
-		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme $1/}" ~/.config/nvim/settings.vim
-		sed "s/theme = '[^']*'/theme = '$1'/g" -i .config/nvim/lua/lualine_config.lua
-	fi
+elif [[ "$1" == "dracula" ]]; then
+	# nvim
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = 'chadracula'/}" $nvim_chadrc
 
+elif [[ "$1" == "gruvbox" ]]; then
+	# nvim
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = 'gruvchad'/}" $nvim_chadrc
 
-if [[ "$1" == "nord" ]]; then
+elif [[ "$1" == "nord" ]]; then
 	#waybar
 		cp ${waybar_dir}/nord.css ${waybar_dir}/style.css
-fi
-
+	# nvim
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = 'onenord'/}" $nvim_chadrc
+  else 
+		sed -i "0,/theme/{s/\(theme\)\(.*\)/theme = '$1'/}" $nvim_chadrc
+	fi
 
 	hyprctl reload # restart hyprland
 }

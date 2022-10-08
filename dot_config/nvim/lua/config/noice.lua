@@ -1,4 +1,4 @@
-  require("noice").setup({
+require("noice").setup({
     views = {
       cmdline_popup = {
         position = {

@@ -3,7 +3,9 @@
 -- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 -- vim.o.foldtext = "getline(v:foldstart).'...'.trim(getline(v:foldend))"
 
-vim.o.tabstop = 2
+vim.o.softtabstop = true
+vim.o.tabstop = 3
+vim.o.shiftwidth = 3
 -- Set highlight on search
 vim.o.hlsearch = false
 

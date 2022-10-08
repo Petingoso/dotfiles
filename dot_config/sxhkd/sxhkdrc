@@ -29,11 +29,10 @@ alt + ctrl + k
 
 # dmenu
 alt + d
-	dmenu_run -l 9 -p "﩯 "
-
+	~/.config/rofi/launchers/type-1/launcher.sh
 # show desktop applications
-alt + a
-	bash ~/.local/bin/dmenu_app
+# alt + a
+	# bash ~/.local/bin/dmenu_app
 
 ##---------- Other programs or scripts (super + ctrl) ----------##
 
@@ -72,10 +71,10 @@ XF86MonBrightnessDown
 	light -T 0.63
 # Volume control
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 +5%
+	pactl set-sink-volume 1 +5%
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -5%
+	pactl set-sink-volume 1 -5%
 
 XF86AudioMute
-	pactl set-sink-mute 0 toggle
+	pactl set-sink-mute 1 toggle

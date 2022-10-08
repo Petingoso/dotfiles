@@ -50,13 +50,13 @@ local color =
 
 	date_ic_fg = fg_black;
 	date_ic_bg = bg_orange1;
-	date_fg = fg_black;
-	date_bg = bg_orange2;
+	date_fg = fg_orange2;
+	date_bg = bg_black;
 
 	time_ic_fg = fg_black;
 	time_ic_bg = bg_yellow1;
-	time_fg = fg_black;
-	time_bg = bg_yellow2;
+	time_fg = fg_yellow2;
+	time_bg = bg_black;
 
 	wifi_ic_fg = fg_black;
 	wifi_ic_bg = bg_green1;

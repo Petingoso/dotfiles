@@ -2,7 +2,7 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: Ubuntu Mono Nerd Font;
+  font-family: JetBrains Mono Nerd Font;
   font-size: 18px;
   min-height: 0;
 }
@@ -90,5 +90,6 @@ tooltip {
 
 #custom-notification{
 	color: #000000;
+	margin-right: 15px;
 }
 

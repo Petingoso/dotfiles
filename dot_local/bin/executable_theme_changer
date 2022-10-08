@@ -6,10 +6,10 @@ dmenu_dir="$HOME/.config/dmenu"
 dwm_luastatus_dir="$HOME/.config/dwm/luastatus/colorscheme"
 alacritty_dir="$HOME/.config/alacritty"
 kitty_dir="$HOME/.config/kitty"
-zathura_dir="$HOME/.config/zathura"
+rofi_dir="$HOME/.config/rofi/colors"
 
-prompt="dmenu -l 9 "
-#prompt="rofi -dmenu"
+# prompt="dmenu -l 9 "
+prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi"
 
 # for restarting dwm
 dwm_pid="$(pidof dwm)"
@@ -33,7 +33,7 @@ change_theme()
 	cp ${dwm_luastatus_dir}/$1.lua ${dwm_luastatus_dir}/color.lua
 	cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
 	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
-	cp ${zathura_dir}/theme/$1 ${zathura_dir}/theme.color
+	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
 if [[ "$1" == "cozy-night" ]]; then
 	# nvim
 		sed -i "0,/colorscheme/{s/\(colorscheme\)\(.*\)/colorscheme dark_purple/}" ~/.config/nvim/settings.vim
@@ -82,5 +82,4 @@ case $select in
 		feh --bg-fill /home/petartix/.config/wallpaper/mist_forest_nord.jpg
 		change_theme nord
 		change_gtk_theme Nordic
-		;;
 	esac

@@ -1,14 +1,14 @@
-/*all.css*/
+/*nord.css*/
 * {
   border: none;
   border-radius: 0;
-  font-family: Ubuntu Mono Nerd Font;
+  font-family: JetBrains Mono Nerd Font;
   font-size: 18px;
   min-height: 0;
 }
 
 window#waybar {
-  background: transparent;
+  background: 000000;
   color: white;
 }
 
@@ -22,12 +22,12 @@ tooltip {
 
 #workspaces button {
   padding: 5px;
-  color: #434343;
+  color: #dedede;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  color: #dedede;
+  color: #000000;
 }
 
 #workspaces button.focused {
@@ -43,12 +43,12 @@ tooltip {
 }
 
 #workspaces button:hover {
-  background-color: #ffffff;
-  color: #232323;
+  background-color: #1e1e2e;
+  color: #ffffff;
   border-radius: 10px;
 }
 
-#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification{
+#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification {
   background-color: transparent;
   padding: 3px 10px;
   margin: 3px 0px;
@@ -66,7 +66,7 @@ tooltip {
 }
 
 #clock {
-  color: #ffffff;
+  color: #000000;
   border-radius: 10px;
 }
 
@@ -89,6 +89,7 @@ tooltip {
 }
 
 #custom-notification{
-	color: #ffffff;
+	color: #000000;
+	margin-right: 15px;
 }
 
