@@ -7,11 +7,12 @@ vim.g.mapleader = 'ç'
 vim.g.maplocalleader = ','
 local map = vim.keymap.set
 
-local maps = { i = {}, n = {}, v = {}, t = {}, [""] = {} }
 -- Keymaps for better default experience
 -- See `:help map()`
+map('n', "<C-P>", "<cmd>Telescope<CR>",{})
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 map('t', "<ESC>", "<CR><C-d><CR>", {} )
+map('n', "<C-x>", "<cmd>!xdg-open %<CR>", {} )
 
 -- Remap for dealing with word wrap
 map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })

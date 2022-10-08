@@ -94,6 +94,22 @@ require('packer').startup(function(use)
      }
   use 'alvan/vim-closetag'
   use('mrjones2014/smart-splits.nvim')
+  use 'chentoast/marks.nvim'
+  use{ 'anuvyklack/pretty-fold.nvim',
+    config = function()
+       require('pretty-fold').setup()
+    end
+  }
+  use({ 'vladdoster/remember.nvim', config = [[ require('remember') ]] })
+  use 'ray-x/web-tools.nvim'
+-- Packer
+use({
+  "folke/noice.nvim",
+  requires = {
+    "MunifTanjim/nui.nvim",
+    "rcarriga/nvim-notify",
+    }
+})
 
   if is_bootstrap then
     require('packer').sync()

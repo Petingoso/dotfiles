@@ -1,5 +1,7 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
+-- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+-- vim.o.foldtext = "getline(v:foldstart).'...'.trim(getline(v:foldend))"
 
 vim.o.tabstop = 2
 -- Set highlight on search

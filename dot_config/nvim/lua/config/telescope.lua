@@ -13,6 +13,7 @@ require('telescope').setup {
 
 -- Enable telescope fzf native, if installed
 pcall(require('telescope').load_extension, 'fzf')
+require("telescope").load_extension("noice")
 
 -- See `:help telescope.builtin`
 vim.keymap.set('n', '<leader>/', function()
@@ -22,5 +23,4 @@ vim.keymap.set('n', '<leader>/', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
-
 
