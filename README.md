@@ -30,11 +30,11 @@ I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11
  ## Dependencies
  This is not an intensive list but here's a reference
  
- Wayland: wayland, Hyprland-waybar-git, swaync, swaybg, waybar, libinput-gestures-setup, grim, slur, swappy, wk-copy, rofi-lbonn-wayland, gammmastep, gtklock
+ Wayland: `wayland, Hyprland-waybar-git, swaync, swaybg, waybar, libinput-gestures-setup, grim, slur, swappy, wk-copy, rofi-lbonn-wayland, gammmastep, gtklock`
   
-  X11: xorg, xorg-xinit, xss-lock, picom, lua status, the custom dwm, dmenu and slock, flameshot, deadd-notification-center, feh
+  X11: `xorg(duh!), xorg-xinit, xss-lock, picom, lua status, the custom dwm, dmenu and slock, flameshot, deadd-notification-center, feh`
   
-  Misc for both (many complementary): Dbus, kitty, keepassxc, pcloud, nvim, mate-polkit, pulseaudio, light, ranger
+  Misc for both (many complementary): `Dbus, kitty, keepassxc, pcloud, nvim, mate-polkit, pulseaudio, light, ranger`
   
   That should be about it.
 
