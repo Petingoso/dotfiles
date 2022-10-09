@@ -42,7 +42,7 @@ I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11
 
 - https://github.com/junnunkarim/dotfiles-linux for most of the dwm and related configurations
 
-- https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs
+- ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
 
 - https://github.com/lauroro/hyprland-dotfiles for most of the waybar config
 
