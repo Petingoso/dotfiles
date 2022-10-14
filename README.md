@@ -44,7 +44,7 @@ I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11
 
 - ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
 
-- https://github.com/lauroro/hyprland-dotfiles for most of the waybar config
+- ~~https://github.com/lauroro/hyprland-dotfiles (old config)~~ https://github.com/justleoo/dotfiles for most of the waybar config
 
 - https://github.com/adi1090x/rofi for amazing rofi themes
 
@@ -53,9 +53,12 @@ Well not like anyone's gonna read this except but me but that's all folks
 ## Screenshots
 
 ### Wayland:
-![20220818125250_1](https://user-images.githubusercontent.com/92183955/185388379-96d93585-240c-4974-acbb-f145189ffc11.png)
-![20220818125314_1](https://user-images.githubusercontent.com/92183955/185388385-251def43-c88a-44d2-bdb3-603493c8a82f.png)
-![20220818125327_1](https://user-images.githubusercontent.com/92183955/185388388-11ae25f7-a22b-4039-afdc-d1bb400d1b39.png)
+![20221014191411_1](https://user-images.githubusercontent.com/92183955/195913699-d8e06192-288a-423a-83b1-2a63fb5d930d.png)
+
+![20221014191512_1](https://user-images.githubusercontent.com/92183955/195913773-eff5fe68-1fd2-4fb9-8899-f2870033926d.png)
+
+![20221014191618_1](https://user-images.githubusercontent.com/92183955/195913926-922374ad-3c3c-4ab4-8dd7-44de0782e3ce.png)
+
 
 
 ### X11:
