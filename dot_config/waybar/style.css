@@ -10,18 +10,17 @@ margin: 10px;
   padding: 7px;
   padding-left: 4px;
   border-radius: 50px;
-  /* background-color: #232a2d; */
-    background: transparent;
-  font-size: 12px;    
+  background: transparent;
+  font-size: 14px;    
 }
 
 #workspaces button {
-  color: #000000;
+  color: #dadada;
    padding: 2px 7px;
 }
 
 #workspaces button:hover {
-  background: #ffffff;
+  background: #232a2d;
 }
 
 #workspaces button.focused {
