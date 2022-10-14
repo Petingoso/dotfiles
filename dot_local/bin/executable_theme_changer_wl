@@ -78,7 +78,7 @@ case $select in
 		;;
 	$theme4)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/pixelart_house_inside_girl_book_dog.png &
+		swaybg -m fill -i $HOME/Pictures/Backgrounds/gruvbox/mountain.jpeg &
 		change_theme gruvbox
 		change_gtk_theme Gruvbox-Material-Dark
 		$HOME/scripts/gtk2gsetting.sh

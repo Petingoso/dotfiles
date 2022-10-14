@@ -44,13 +44,11 @@ if [[ "$1" == "cozy-night" ]]; then
 elif [[ "$1" == "catppuccin_macchiato" ]]; then
 	# nvim
 	sed -i 's/\(colorscheme \)\(.*\)/\1catppuccin]]/' $nvim_settings
-
-	else
-    # nvim
-	fi
+fi
 	xrdb -merge -I$HOME ~/.Xresources # reload Xresources
 	kill -HUP dwmpid $dwm_pid # restart dwm
 }
+
 change_gtk_theme() 
 {
    sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i ~/.config/gtk-3.0/settings.ini

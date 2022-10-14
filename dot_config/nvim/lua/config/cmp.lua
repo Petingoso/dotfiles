@@ -1,4 +1,3 @@
-
 -- nvim-cmp setup
 local cmp = require 'cmp'
 local luasnip = require 'luasnip'
@@ -10,7 +9,6 @@ cmp.setup {
       mode = 'symbol', -- show only symbol annotations
       maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
       ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-
       -- The function below will be called before any actual modifications from lspkind
       -- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
       before = function (entry, vim_item)
@@ -23,6 +21,10 @@ cmp.setup {
       luasnip.lsp_expand(args.body)
     end,
   },
+    formatting = {
+    format = lspkind.cmp_format({ with_text = true, maxwidth = 100 }),
+  },
+
   mapping = cmp.mapping.preset.insert {
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -51,8 +53,58 @@ cmp.setup {
     end, { 'i', 's' }),
   },
   sources = {
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
+    { name = "luasnip" },
+    { name = "nvim_lsp" },
+    { name = "omni" },
+    { name = 'buffer' },
+    { name = "nvim_lua" },
+    { name = 'path' },
+  },
+  window = {
+    completion = cmp.config.window.bordered(),
+    documentation = cmp.config.window.bordered(),
+  },
+  experimental = {
+    ghost_text = true,
+  },
+  view = {
+    native_menu = true,
   },
 }
+
+cmp.setup.cmdline("/", {
+  mapping = {
+    ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+    ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-e>"] = cmp.mapping(cmp.mapping.close(), { "i", "c" }),
+    ["<TAB>"] = cmp.mapping({
+      c = cmp.mapping.confirm({ select = true }),
+    }, { "i", "c" }),
+    ["<CR>"] = cmp.mapping({
+      i = cmp.mapping.confirm({ select = true }),
+    }, { "i", "c" }),
+  },
+  sources = {
+    { name = "buffer" },
+  },
+})
+cmp.setup.cmdline("?", {
+  mapping = {
+    ["<C-n>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+    ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item()),
+    ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    ["<C-e>"] = cmp.mapping(cmp.mapping.close(), { "i", "c" }),
+    ["<TAB>"] = cmp.mapping({
+      c = cmp.mapping.confirm({ select = false }),
+    }),
+    ["<CR>"] = cmp.mapping({
+      i = cmp.mapping.confirm({ select = true }),
+    }),
+  },
+  sources = {
+    { name = "buffer" },
+  },
+})
+
 

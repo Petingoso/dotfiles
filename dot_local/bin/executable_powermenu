@@ -1,35 +1,36 @@
 #!/usr/bin/env bash
 
-prompt="dmenu -l 7 "
+# prompt="dmenu -l 7 "
+prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/power.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
-dwm_pid="$(pidof dwm)"
+dwm_pid="$(pidof dwm) || $(pidof hyprland)"
 
 shutdown=" Shutdown"
-reboot="ﰇ Restart"
+reboot=" Restart"
 suspend="鈴 Suspend"
 lock=" Lock"
 logout="﫼 Logout"
 cancel="窱 Cancel"
 
-option="$cancel\n$hibernate\n$shutdown\n$reboot\n$suspend\n$lock\n$logout"
+option="$cancel\n$shutdown\n$reboot\n$suspend\n$lock\n$logout"
 
 select="$(echo -e "$option" | $prompt -p "Uptime - $uptime")"
 
 case $select in
 	$shutdown)
-		sudo shutdown 
+		loginctl poweroff
 		;;
 	$reboot)
-		sudo reboot
+		loginctl reboot
 		;;
 	$suspend)
-		xset s activate 
-		sudo zzz
+		doas ~/scripts/suspend.sh
+		~/scripts/lock.sh
 		;;
 	$lock)
-		xset s activate
+		~/scripts/lock.sh
 		;;
 	$logout)
-		kill -TERM dwmpid $dwm_pid
+		loginctl terminate-session 1
 esac

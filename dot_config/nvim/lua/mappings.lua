@@ -13,6 +13,7 @@ map('n', "<C-P>", "<cmd>Telescope<CR>",{})
 map({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 map('t', "<ESC>", "<CR><C-d><CR>", {} )
 map('n', "<C-x>", "<cmd>!xdg-open %<CR>", {} )
+map('i', "<C-l>", "<C-x><C-o>", { desc = "Suggest wiki pages"  } )
 
 -- Remap for dealing with word wrap
 map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
@@ -93,7 +94,6 @@ wk.register({
       ["<leader>ca"] = { vim.lsp.buf.code_action, "[C]ode [A]ction" },
       ["gd"] = { vim.lsp.buf.definition, "[G]oto [D]efinition" },
       ["gi"] = { vim.lsp.buf.implementaion, "[G]oto [I]mplementation" },
-  ["<C-t>"] = { "", "Toggle floating terminal" },
   ["<leader>e"] = {"<cmd>Neotree toggle<cr>", "Toggle Explorer"},
   ["<leader>o"] = {"<cmd>Neotree focus<cr>", "Toggle Explorer"}
 })

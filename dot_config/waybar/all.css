@@ -1,95 +1,80 @@
-/*all.css*/
-* {
-  border: none;
-  border-radius: 0;
-  font-family: Jetbrains Mono Nerd Font;
-  font-size: 18px;
-  min-height: 0;
-}
-
 window#waybar {
-  background: transparent;
-  color: white;
-}
-
-tooltip {
-  background: #232323;
-  border-radius: 10px;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #202020;
-}
-
-#workspaces button {
-  padding: 5px;
-  color: #434343;
-  margin-right: 5px;
-}
-
-#workspaces button.active {
-  color: #dedede;
-}
-
-#workspaces button.focused {
-  color: #dedede;
-  background-color: #c49ec4;
-  border-radius: 10px;
-}
-
-#workspaces button.urgent {
-  color: #0f0f0f;
-  background-color: #9ec3c4;
-  border-radius: 10px;
-}
-
-#workspaces button:hover {
-  background-color: #ffffff;
-  color: #232323;
-  border-radius: 10px;
-}
-
-#clock, #battery, #pulseaudio, #network, #workspaces, #tray, #backlight #custom-notification{
-  background-color: transparent;
-  padding: 3px 10px;
-  margin: 3px 0px;
-}
-
-#tray {
-  border-radius: 10px;
-  margin-right: 4px;
+    /* background-color: #141b1e; */
+    background: transparent;
+    font-family: Iosevka Nerd Font;
 }
 
 #workspaces {
-  background-color: transparent;
-  border-radius: 10px;
-  padding-right: 5px;
+margin: 10px;
+  margin-top: 4px;
+  padding: 7px;
+  padding-left: 4px;
+  border-radius: 50px;
+  background: transparent;
+  font-size: 12px;    
+}
+
+#workspaces button {
+  color: #dadada;
+   padding: 2px 7px;
+}
+
+#workspaces button:hover {
+  background: #232a2d;
+}
+
+#workspaces button.focused {
+  color: #b3b9b8;
+}
+
+#custom-power {
+    color: #141b1e;
+    background-color: #e57474; 
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10px 0px;
+    margin: 0px 10px;
+    margin-bottom: 5px;
 }
 
 #clock {
-  color: #ffffff;
-  border-radius: 10px;
+    color: #dadada;
+    font-size: 1.2em;
+    margin-bottom: 8px;
 }
 
-#network {
-  color: #fab387;
-  border-radius: 10px 0px 0px 10px;
+#custom-void {
+    color: #141b1e;
+    background-color: #8ccf7e;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 10 0px;
+    margin: 0 10px;
+    margin-bottom: 5px;
+    margin-top: 8px;
 }
 
-#pulseaudio {
-  color: #588cd3;
+#custom-separator {
+    color: #dadada; 
 }
 
-#battery{
-  color:  #58d3a4;
-  border-radius: 0 10px 10px 0;
+#battery {
+    color: #dadada;
+    font-size: 17px;
 }
 
-#backlight{
-  color: #a51a9a;
+#custom-wofi {
+    border-radius: 50px;
+    margin: 10px;
+    font-size:17px;
+    padding: 7px;
+    background-color: #232a2d;
+    color: #dadada;
 }
 
-#custom-notification{
-	color: #ffffff;
-	margin-right: 15px;
+#custom-notification {
+    font-size: 17px;
+    color: #ffffff;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
-

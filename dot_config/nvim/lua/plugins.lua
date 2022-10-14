@@ -103,13 +103,40 @@ require('packer').startup(function(use)
   use({ 'vladdoster/remember.nvim', config = [[ require('remember') ]] })
   use 'ray-x/web-tools.nvim'
 -- Packer
+-- use({
+--   "folke/noice.nvim",
+--   requires = {
+--     "MunifTanjim/nui.nvim",
+--     "rcarriga/nvim-notify",
+--     }
+-- })
+
 use({
-  "folke/noice.nvim",
-  requires = {
-    "MunifTanjim/nui.nvim",
-    "rcarriga/nvim-notify",
-    }
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
 })
+
+  use 'lervag/wiki.vim'
+
+
+  -- Lua
+use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
+  use 'lervag/vimtex'
+  use 'xuhdev/vim-latex-live-preview'
+  use 'hrsh7th/cmp-omni'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
 
   if is_bootstrap then
     require('packer').sync()

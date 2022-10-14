@@ -7,6 +7,9 @@ alt + Return
 alt + shift  + p
 	slock
 
+#powermenu
+alt +x 
+	~/.local/bin/powermenu
 # Reload Keybindings
 alt + BackSpace
 	pkill -USR1 -x sxhkd
@@ -61,6 +64,9 @@ alt + Print
 shift + Print
 	flameshot full -d 10000 -p $HOME/Pictures/SS/
 
+ctrl + Print
+	textshot eng+por+jpn
+
 #Player ctl
 alt + p
 	playerctl play-pause
@@ -71,10 +77,10 @@ XF86MonBrightnessDown
 	light -T 0.63
 # Volume control
 XF86AudioRaiseVolume
-	pactl set-sink-volume 1 +5%
+	pactl set-sink-volume 0 +5%
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 1 -5%
+	pactl set-sink-volume 0 -5%
 
 XF86AudioMute
-	pactl set-sink-mute 1 toggle
+	pactl set-sink-mute 0 toggle

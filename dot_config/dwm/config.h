@@ -496,10 +496,9 @@ static const Rule rules[] = {
 	
 	RULE(.class = "Ryujinx", .tags = 1 << 6, .switchtag = 1, .isfloating = 1) // tag-6
 	RULE(.class = "yuzu", .tags = 1 << 6, .switchtag = 1, .isfloating = 1) // tag-6
-																																			//
 	RULE(.class = "GParted", .isfloating = 1, .iscentered = 1) // tag-8
 	RULE(.class = "Xfce4-power-manager-settings", .tags = 1 << 7, .switchtag = 1, .isfloating = 1, .iscentered = 1)
-
+	RULE(.class = "textshot", .iscentered = 1, .isfloating = 1)
 	#if SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .tags = SPTAG(0), .isfloating = 1)
 	#endif // SCRATCHPADS_PATCH

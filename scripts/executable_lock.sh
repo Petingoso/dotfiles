@@ -1,0 +1,1 @@
+slock || gtklock || echo "a"
