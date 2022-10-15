@@ -23,8 +23,8 @@ margin: 10px;
   background: #232a2d;
 }
 
-#workspaces button.focused {
-  color: #b3b9b8;
+#workspaces button.active {
+  color: #000000;
 }
 
 #custom-power {

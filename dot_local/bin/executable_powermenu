@@ -13,7 +13,8 @@ lock=" Lock"
 logout="﫼 Logout"
 cancel="窱 Cancel"
 
-option="$cancel\n$shutdown\n$reboot\n$suspend\n$lock\n$logout"
+# option="$cancel\n$shutdown\n$reboot\n$suspend\n$lock\n$logout"
+option="$cancel\n$shutdown\n$reboot\n$lock\n$logout"
 
 select="$(echo -e "$option" | $prompt -p "Uptime - $uptime")"
 
@@ -24,10 +25,10 @@ case $select in
 	$reboot)
 		loginctl reboot
 		;;
-	$suspend)
-		doas ~/scripts/suspend.sh
-		~/scripts/lock.sh
-		;;
+	# $suspend)
+	# 	doas ~/scripts/suspend.sh
+	# 	~/scripts/lock.sh
+	# 	;;
 	$lock)
 		~/scripts/lock.sh
 		;;

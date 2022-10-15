@@ -1,7 +1,10 @@
+.*{
+    
+    font-family: Source Code Pro;
+}
 window#waybar {
     /* background-color: #141b1e; */
     background: transparent;
-    font-family: Iosevka Nerd Font;
 }
 
 #workspaces {
@@ -21,11 +24,11 @@ margin: 10px;
 }
 
 #workspaces button:hover {
-  background: #ffffff;
+  background: #4C566A;
 }
 
-#workspaces button.focused {
-  color: #b3b9b8;
+#workspaces button.active {
+  color: #D8DEE9;
 }
 
 #custom-power {

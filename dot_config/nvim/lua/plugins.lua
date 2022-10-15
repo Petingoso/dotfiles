@@ -39,6 +39,7 @@ require('packer').startup(function(use)
   use 'folke/tokyonight.nvim'
   use 'Mofiqul/dracula.nvim'
   use 'ellisonleao/gruvbox.nvim'
+  use 'sainnhe/everforest'
 
   use 'goolord/alpha-nvim'
 

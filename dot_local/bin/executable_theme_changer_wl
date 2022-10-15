@@ -17,9 +17,10 @@ theme2=" Cozy-Night"
 theme3=" Dracula"
 theme4=" Gruvbox"
 theme5=" Nord"
+theme6=" Everforest"
 
 # Variable to pass to dmenu or rofi
-option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5"
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6"
 
 
 change_theme()
@@ -40,6 +41,9 @@ elif [[ "$1" == "catppuccin_macchiato" ]]; then
 elif [[ "$1" == "nord" ]]; then
 	#waybar
 		cp ${waybar_dir}/nord.css ${waybar_dir}/style.css
+elif [[ "$1" == "everforest" ]]; then
+	#waybar
+		cp ${waybar_dir}/everforest.css ${waybar_dir}/style.css
 	fi
 
 	hyprctl reload # restart hyprland
@@ -88,6 +92,13 @@ case $select in
 		swaybg -m fill -i $HOME/.config/wallpaper/mist_forest_nord.jpg &
 		change_theme nord
 		change_gtk_theme Nordic
+		$HOME/scripts/gtk2gsetting.sh
+		;;
+	$theme6)
+		pkill -kill swaybg
+		swaybg -m fill -i $HOME/.config/wallpaper/everforest.jpg &
+		change_theme everforest
+		change_gtk_theme everforest
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	esac

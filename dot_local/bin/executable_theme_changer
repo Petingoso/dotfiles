@@ -22,9 +22,10 @@ theme2=" Cozy-Night"
 theme3=" Dracula"
 theme4=" Gruvbox"
 theme5=" Nord"
+theme6=" Everforest"
 
 # Variable to pass to dmenu or rofi
-option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5"
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6"
 
 
 change_theme()
@@ -32,7 +33,7 @@ change_theme()
 	cp ${dwm_dir}/theme_xresources/$1 ${dwm_dir}/theme_xresources/theme
 	cp ${dmenu_dir}/theme_xresources/$1 ${dmenu_dir}/theme_xresources/theme
 	cp ${dwm_luastatus_dir}/$1.lua ${dwm_luastatus_dir}/color.lua
-	cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
+	# cp ${alacritty_dir}/colorscheme/$1.yml ${alacritty_dir}/color.yml
 	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
 	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
 	sed -i "s/\(colorscheme \)\(.*\)/\1$1]]/" $nvim_settings
@@ -81,4 +82,9 @@ case $select in
 		feh --bg-fill /home/petartix/.config/wallpaper/mist_forest_nord.jpg
 		change_theme nord
 		change_gtk_theme Nordic
+		;;
+	$theme6)
+		feh --bg-fill /home/petartix/.config/wallpaper/everforest.jpg
+		change_theme everforest
+		change_gtk_theme everforest
 	esac

@@ -1,1 +1,1 @@
-su -c "echo -n mem > /sys/power/state"
+su -c "zzz"

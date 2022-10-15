@@ -1,1 +1,1 @@
-slock || gtklock || echo "a"
+slock || gtklock || vlock
