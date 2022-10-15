@@ -15,7 +15,7 @@ margin: 10px;
 }
 
 #workspaces button {
-  color: #4b565c;
+  color: #aaaaaa;
    padding: 2px 7px;
 }
 
@@ -24,7 +24,7 @@ margin: 10px;
 }
 
 #workspaces button.active {
-  color: #d3c6aa;
+  color: #ffffff;
 }
 
 #custom-power {
