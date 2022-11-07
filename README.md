@@ -4,7 +4,7 @@ I can't use chezmoi so this is a mess.
 I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11.
 
 *DWM*:
-- dwm with dmenu
+- dwm with rofi
 
 - sxhkshfd or whatever for hotkey
 
@@ -12,7 +12,7 @@ I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11
 
 - cool neovim configuration
 
-- terminal is kitty and integrated with the theme switcher
+- terminal is kitty and integrated with the theme changer.
  
  **check the app integrated .local/bin/dwm_keybindings, for the keybinds**
 
@@ -25,7 +25,7 @@ I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11
 
 - same nvim and terminal
 
- **the theme swicher is themeswitcher_wl and the keys hyp_bindings**
+ **the theme switcher is theme_changer_wl and the keys hyp_bindings**
  
  ## Dependencies
  This is not an intensive list but here's a reference

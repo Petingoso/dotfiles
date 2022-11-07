@@ -59,6 +59,14 @@ cmp.setup {
     { name = 'buffer' },
     { name = "nvim_lua" },
     { name = 'path' },
+    { name = 'spell',
+      option = {
+                keep_all_entries = false,
+                enable_in_context = function()
+                    return true
+                end,
+            },
+    },
   },
   window = {
     completion = cmp.config.window.bordered(),

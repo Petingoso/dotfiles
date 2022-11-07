@@ -19,7 +19,11 @@ map('i', "<C-l>", "<C-x><C-o>", { desc = "Suggest wiki pages"  } )
 map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
-
+map('n', '<F11>', ":set spell!<cr>", { silent = true, desc= "Toggle spell" })
+map('i', '<F11>', "<C-O>:set spell!<cr>", { silent = true })
+map('n', '<F10>', ":EnableAutocorrect<cr>", { silent = true, desc= "Enable autocorrect" })
+map('n', '<S-F10>', ":DisableAutocorrect<cr>", { silent = true, desc= "Disable autocorrect" })
+ 
 -- Diagnostic keymaps
 map('n', '<S-g>d', vim.diagnostic.goto_prev)
 map('n', '<S-g>f', vim.diagnostic.goto_next)

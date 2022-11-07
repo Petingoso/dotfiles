@@ -1,1 +1,1 @@
-/opt/discord/Discord --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization --enable-zero-copy  --enable-features=VaapiVideoDecoder --enable-features=UseOzonePlatform --ozone-platform=wayland 
+GDK_BACKEND=x11 /opt/discord/Discord --enable-accelerated-mjpeg-decode --enable-accelerated-video --ignore-gpu-blacklist --enable-native-gpu-memory-buffers --enable-gpu-rasterization --enable-zero-copy  --enable-features=VaapiVideoDecoder --enable-features=UseOzonePlatform 

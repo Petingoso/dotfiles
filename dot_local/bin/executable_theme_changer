@@ -61,7 +61,7 @@ case $select in
 	$theme1)
 		feh --bg-fill --randomize $HOME/.config/wallpaper/pixelart_night_stars_clouds_trees_cozy_PixelArtJourney.png $HOME/.config/wallpaper/pixelart_evening_trees_pole_wires_makrustic.png
 		change_theme catppuccin_macchiato
-    change_gtk_theme Catppuccin-purple 
+    change_gtk_theme Catppuccin-Macchiato-Red 
 		;;
 	$theme2)
 		feh --bg-fill /home/petartix/.config/wallpaper/dark-cat.png 

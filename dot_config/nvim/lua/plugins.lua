@@ -138,6 +138,8 @@ use {
   use 'hrsh7th/cmp-omni'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
+  use 'f3fora/cmp-spell'
+  use 'sedm0784/vim-you-autocorrect'
 
   if is_bootstrap then
     require('packer').sync()

@@ -33,7 +33,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme catppuccin]]
+vim.cmd [[colorscheme gruvbox]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -41,4 +41,8 @@ vim.o.completeopt = 'menuone,noselect'
 vim.g.wiki_root = '~/Documents/notes/'
 vim.g.wiki_link_extension = '.md'
 vim.g.wiki_link_target_type = 'md'
+
+vim.o.spell = true
+
+vim.opt.spelllang={'en', 'pt', 'cjk'}
 

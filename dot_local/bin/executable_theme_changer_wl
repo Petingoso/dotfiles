@@ -63,7 +63,7 @@ case $select in
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/cat-waves.png &
 		change_theme catppuccin_macchiato
-		change_gtk_theme Catppuccin-purple 
+		change_gtk_theme Catppuccin-Macchiato-Red
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme2)

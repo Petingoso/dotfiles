@@ -1,15 +1,7 @@
 #!/bin/sh
-setxkbmap pt
 xrdb -merge -I$HOME ~/.Xresources # reload Xresources
-export QT_QPA_PLATFORMTHEME="qt5ct"
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-pcloud &
-# deadd-notification-center & 
-# pipewire &
-# pipewire-pulse &
-# wireplumber &
 xset s 600
 xss-lock slock &
 picom --experimental-backends &
+~/.xprofile &
 dbus-launch --exit-with-session dwm
-# dbus-launch --exit-with-session gnome-shell --x11
