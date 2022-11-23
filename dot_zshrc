@@ -16,17 +16,17 @@ autoload -Uz _zinit
 
 
 #-------PLUGINS-------
-zinit light-mode for							\
-	aloxaf/fzf-tab								\
+zinit light-mode for					\
+	aloxaf/fzf-tab				    	\
 	zdharma-continuum/fast-syntax-highlighting	\
-	hlissner/zsh-autopair						\
-	arzzen/calc.plugin.zsh						\
-	willghatch/zsh-saneopt						\
-	zsh-users/zsh-autosuggestions				\
-	zsh-users/zsh-completions					\
-	raisty/alt-and-select						\
-	xylous/gitstatus							\
-	 joshskidmore/zsh-fzf-history-search
+	hlissner/zsh-autopair				\
+	arzzen/calc.plugin.zsh				\
+	willghatch/zsh-saneopt				\
+	zsh-users/zsh-autosuggestions			\
+	zsh-users/zsh-completions			\
+	raisty/alt-and-select				\
+	xylous/gitstatus				\
+	joshskidmore/zsh-fzf-history-search
 
 ################################
 
@@ -71,6 +71,7 @@ export FZF_DEFAULT_OPTS='--color=fg:#ebdbb2,hl:#bd93f9 --color=fg+:#d5c4a1,bg+:#
 zstyle ':completion:*:descriptions' format '[%d]' # set descriptions format to enable group support 
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # set list-colors to enable filename colorizing
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath' # preview directory's content with exa when completing cd
+
 #-------PROMPT-------
 PROMPT="%B$(gitstatus -i)%F{10}%n%F{10}@%F{10}%m%F{10}: "
 RPROMPT="%B%~%B%F{10} %B%*%b%B/%b%B%w%b"
@@ -107,6 +108,7 @@ alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ &
 alias xgo='xdg-open'
 alias krita='krita'
 
+#-------VARIABLES-------
 export notes="/home/petartix/Documents/notes"
 export HDDMAIN="/media/petarch/HDDMAIN/"
 export EDITOR='nvim'
@@ -114,27 +116,8 @@ export VISUAL='nvim'
 export PATH="$PATH:$HOME/.local/bin:/usr/local/bin/"
 ###########################
 
-#-------MISC--------------
-# kitty + complete setup zsh | source /dev/stdin
-##############################
-
-
-#-------STARTUP MESSAGE-------
-# echo " 
-# 		 █████╗ ██████╗ ████████╗██╗██╗  ██╗    ██████╗ ████████╗██╗    ██╗██╗
-# 		██╔══██╗██╔══██╗╚══██╔══╝██║╚██╗██╔╝    ██╔══██╗╚══██╔══╝██║    ██║██║
-#      	███████║██████╔╝   ██║   ██║ ╚███╔╝     ██████╔╝   ██║   ██║ █╗ ██║██║
-# 		██╔══██║██╔══██╗   ██║   ██║ ██╔██╗     ██╔══██╗   ██║   ██║███╗██║╚═╝
-# 		██║  ██║██║  ██║   ██║   ██║██╔╝ ██╗    ██████╔╝   ██║   ╚███╔███╔╝██╗
-# 		╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝╚═╝  ╚═╝    ╚═════╝    ╚═╝    ╚══╝╚══╝ ╚═╝
-#                                                                       "
-#########################
-#AND THAT'S ALL
-chtheme() {
-   sed -e "s/^gtk-theme-name=.*/gtk-theme-name="$@"/" -i $HOME/.config/gtk-3.0/settings.ini
-   sed -e "s/^gtk-theme-name=.*/gtk-theme-name=\""$@"\"/" -i $HOME/.gtkrc-2.0 
-}
-
+#-------FUNCTIONS-------
+#load thefuck on demand (lot faster startup)
 fuck () {
 TF_PYTHONIOENCODING=$PYTHONIOENCODING 
 export TF_SHELL=zsh 
@@ -150,3 +133,4 @@ export PYTHONIOENCODING=$TF_PYTHONIOENCODING
 test -n "$TF_CMD" && print -s $TF_CMD
 }
 
+#AND THAT'S ALL
