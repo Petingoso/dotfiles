@@ -5,8 +5,8 @@ export XMODIFIERS=@im=fcitx
 export GLFW_IM_MODULE=ibus
 export SDL_IM_MODULE=fcitx
 export QT_QPA_PLATFORMTHEME="kvantum"
-QT_XCB_TABLET_LEGACY_COORDINATES=1
+# QT_XCB_TABLET_LEGACY_COORDINATES=1
 
 pcloud1 &
-polkit-mate &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fcitx5 &

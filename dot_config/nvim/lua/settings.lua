@@ -1,8 +1,5 @@
 -- [[ Setting options ]]
--- See `:help vim.o`
--- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
--- vim.o.foldtext = "getline(v:foldstart).'...'.trim(getline(v:foldend))"
-
+--tab settings
 vim.o.softtabstop = true
 vim.o.tabstop = 3
 vim.o.shiftwidth = 3
@@ -38,11 +35,37 @@ vim.cmd [[colorscheme gruvbox]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
+--set wiki.vim root and filetypes
 vim.g.wiki_root = '~/Documents/notes/'
+vim.g.wiki_filetypes = {'md', 'markdown', 'wiki'}
 vim.g.wiki_link_extension = '.md'
 vim.g.wiki_link_target_type = 'md'
 
+--enable spellchecking
 vim.o.spell = true
 
+--set spell langs
 vim.opt.spelllang={'en', 'pt', 'cjk'}
+
+--set conceallevel, hide some stuff
+vim.o.conceallevel=1
+
+--remove annoying vimtex warning
+vim.g.vimtex_quickfix_open_on_warning = 0
+
+--enable some stuff to work like minted
+vim.g.vimtex_compiler_latexmk = {
+  options = {
+    '-pdf',
+    '-shell-escape',
+    '-verbose',
+    '-file-line-error',
+    '-synctex=1',
+    '-interaction=nonstopmode',
+  }
+}
+
+--set pairs on vim pairs
+vim.cmd [[let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''",'*':'*','**':'**','~~':'~~',}
+]]
 

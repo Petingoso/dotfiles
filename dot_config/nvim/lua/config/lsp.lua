@@ -65,21 +65,17 @@ require('mason').setup()
 require("mason-lspconfig").setup()
 require("mason-lspconfig").setup_handlers {
   function (server_name)
-    require("lspconfig")[server_name].setup{}
-    require('lspconfig')['ltex'].setup({
-      on_attach = on_attach,
-      cmd = { "ltex-ls" },
-      filetypes = { "markdown", "text" },
-      flags = { debounce_text_changes = 300 },
-      settings = {
-        ltex = {
-          language = "auto",
-            additionalRules = {
-            motherToungue = "pt"
-            }
-        }
-      }
-    })
+  require("lspconfig")[server_name].setup{}
   end,
+require('lspconfig')['ltex'].setup({
+  settings = {
+    ltex = {
+      language = "auto",
+        additionalRules = {
+        motherToungue = "pt",
+        }
+    }
+  }
+})
 }
 
