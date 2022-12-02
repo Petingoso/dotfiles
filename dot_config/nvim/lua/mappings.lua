@@ -82,6 +82,7 @@ map('n', "<C-Right>", function() require("smart-splits").resize_right() end, {de
 
 map('n', "<leader>st", function() require("telescope.builtin").oldfiles() end, {desc = "[S]earch his[T]ory" })
 
+map('n', "<leader>zm", ":TZMinimalist<CR>", {})
 local wk = require("which-key")
 -- method 4
 wk.register({

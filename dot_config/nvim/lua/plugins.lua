@@ -27,7 +27,12 @@ require('packer').startup(function(use)
   use 'chentoast/marks.nvim' --better marks
   use 'alvan/vim-closetag' --close html tags
   use { 'vladdoster/remember.nvim', config = [[ require('remember') ]] } --remember buffer position
-
+  use 'ekickx/clipboard-image.nvim' --:PasteImg to paste an image
+  use{ "Pocco81/true-zen.nvim",
+    config = function()
+      require("true-zen").setup {}
+	end,
+}
   --##treesitter
   use 'nvim-treesitter/nvim-treesitter'                                                -- Highlight, edit, and navigate code
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } } -- Additional textobjects for treesitter
