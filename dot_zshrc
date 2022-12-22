@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #--------ZINIT--------
 ### Added by Zinit's installer
 ##############################
@@ -26,7 +33,8 @@ zinit light-mode for					\
 	zsh-users/zsh-completions			\
 	raisty/alt-and-select				\
 	xylous/gitstatus				\
-	joshskidmore/zsh-fzf-history-search
+	joshskidmore/zsh-fzf-history-search		\
+	romkatv/powerlevel10k
 
 ################################
 
@@ -41,7 +49,7 @@ zstyle ':completion:*:*:*:*:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # case insensitive tab completion
 
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path "$HOME/.config/zsh/.zcompcache"
+# zstyle ':completion:*' cache-path "$HOME/.config/zsh/.zcompcache"
 
 # Only display some tags for the command cd
 zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
@@ -73,8 +81,8 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS} # set list-colors to enabl
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath' # preview directory's content with exa when completing cd
 
 #-------PROMPT-------
-PROMPT="%B$(gitstatus -i)%F{10}%n%F{10}@%F{10}%m%F{10}: "
-RPROMPT="%B%~%B%F{10} %B%*%b%B/%b%B%w%b"
+# PROMPT="%B$(gitstatus -i)%F{10}%n%F{10}@%F{10}%m%F{10}: "
+# RPROMPT="%B%~%B%F{10} %B%*%b%B/%b%B%w%b"
 ##############################
 
 
@@ -109,7 +117,7 @@ alias xgo='xdg-open'
 alias krita='krita'
 
 #-------VARIABLES-------
-export notes="/home/petartix/Documents/notes"
+export notes="/home/petarch/Documents/notes"
 export HDDMAIN="/media/petarch/HDDMAIN/"
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -134,3 +142,6 @@ test -n "$TF_CMD" && print -s $TF_CMD
 }
 
 #AND THAT'S ALL
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

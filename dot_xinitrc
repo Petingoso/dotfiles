@@ -1,11 +1,6 @@
 #!/bin/sh
 xrdb -merge -I $HOME ~/.Xresources # reload Xresources
-# xss-lock slock &
+xss-lock slock &
 picom --experimental-backends &
 ~/.xprofile &
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-export GLFW_IM_MODULE=ibus
-export SDL_IM_MODULE=fcitx
 dbus-launch --exit-with-session dwm
