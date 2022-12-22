@@ -1,7 +1,8 @@
 # Dotfiles an stuff
 These are my configs for Arch
 I can't use chezmoi so this is a mess.
-I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11.
+I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11. 
+### Note: I'm leaving DWM so soon im gonna remove all X11 things.
 *DWM*:
 - dwm with rofi
 - sxhkshfd or whatever for hotkey
