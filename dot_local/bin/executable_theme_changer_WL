@@ -17,10 +17,11 @@ theme2=" Cozy-Night"
 theme3=" Dracula"
 theme4=" Gruvbox"
 theme5=" Nord"
-theme6=" Everforest"
+theme6=" Srcery"
+theme7=" Everforest"
 
 # Variable to pass to dmenu or rofi
-option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6"
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6\n$theme7"
 
 
 change_theme()
@@ -38,9 +39,6 @@ elif [[ "$1" == "catppuccin_macchiato" ]]; then
 	# nvim
 	sed -i 's/\(colorscheme \)\(.*\)/\1catppuccin]]/' $nvim_settings
 
-elif [[ "$1" == "nord" ]]; then
-	#waybar
-		cp ${waybar_dir}/nord.css ${waybar_dir}/style.css
 elif [[ "$1" == "everforest" ]]; then
 	#waybar
 		cp ${waybar_dir}/everforest.css ${waybar_dir}/style.css
@@ -61,40 +59,47 @@ select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/cat-waves.png &
+		swaybg -m fill -i $HOME/.config/wallpaper/abstract/cat-waves.png &
 		change_theme catppuccin_macchiato
-		change_gtk_theme Catppuccin-Macchiato-Red
+		change_gtk_theme Catppuccin-Macchiato-Standard-Red-Dark
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme2)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/dark-cat.png &
+		swaybg -m fill -i $HOME/.config/wallpaper/abstract/dark-cat.png &
 		change_theme cozy-night
 		change_gtk_theme TokyoNight
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme3)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/Pictures/Backgrounds/arch/Artix.png &
+		swaybg -m fill -i $HOME/.config/wallpaper/distro/archdracula.png &
 		change_theme dracula
 		change_gtk_theme Dracula
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme4)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/Pictures/Backgrounds/gruvbox/mountain.jpeg &
+		swaybg -m fill -i $HOME/.config/wallpaper/paisages/mountain.jpeg &
 		change_theme gruvbox
 		change_gtk_theme Gruvbox-Material-Dark
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme5)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/mist_forest_nord.jpg &
+		swaybg -m fill -i $HOME/.config/wallpaper/minimal/ign_chomusuke.png &
 		change_theme nord
 		change_gtk_theme Nordic
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme6)
+		pkill -kill swaybg
+		swaybg -m fill -i $HOME/.config/wallpaper/detail/still.jpeg &
+		change_theme srcery
+		change_gtk_theme oomox-srcery
+		$HOME/scripts/gtk2gsetting.sh
+		;;
+	$theme7)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/everforest.jpg &
 		change_theme everforest

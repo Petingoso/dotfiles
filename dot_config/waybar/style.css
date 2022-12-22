@@ -59,6 +59,7 @@ margin: 10px;
 }
 
 #battery {
+    margin-top: 8px;
     color: #dadada;
     font-size: 17px;
 }

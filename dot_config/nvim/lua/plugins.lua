@@ -78,6 +78,7 @@ require('packer').startup(function(use)
   use 'Mofiqul/dracula.nvim'
   use 'ellisonleao/gruvbox.nvim'
   use 'sainnhe/everforest'
+  use 'roosta/srcery'
 
   use 'goolord/alpha-nvim' --startup screen
 

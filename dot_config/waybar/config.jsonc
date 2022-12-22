@@ -1,7 +1,7 @@
 {
     "position": "left",
     "modules-left": ["custom/void","wlr/workspaces"],
-    "modules-right": [ "custom/notification", "battery", "custom/separator", "clock", "custom/power"],
+    "modules-right": [ "custom/notification", "tray", "battery", "custom/separator", "clock", "custom/power"],
     "wlr/workspaces": {
     	"all-outputs": true,
 	"on-click": "activate",
@@ -64,6 +64,9 @@
     "on-click": "swaync-client -C",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+	},
+    "tray": {
+	"show-passive-items": true,
 	}
-    }
+    },
 }

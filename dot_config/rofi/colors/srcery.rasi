@@ -1,10 +1,10 @@
 * {
-  bg:      #1c1b19;
-  fg:      #fce8c3;
-  al:      #665c54;
-  se:      #1d2021;
-  ac:      #ebdbb2;
-  red:     #ef2f27;
+  background:      #1c1b19;
+  foreground:      #fce8c3;
+  selected:      #fce8c3;
+  active:      #1d2021;
+  background-alt:      #262626;
+  urgent:     #ef2f27;
   green:   #519f50;
   yellow:  #fbb829;
   blue:    #2c78bf;
