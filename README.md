@@ -1,4 +1,4 @@
- Dotfiles an stuff
+# Dotfiles an stuff
 These are my configs for Arch
 I can't use chezmoi so this is a mess.
 I've been messing with wayland so it has both Hyprland on Wayland and DWM on X11.
