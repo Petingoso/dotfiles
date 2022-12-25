@@ -1,6 +1,0 @@
-#!/bin/sh
-xrdb -merge -I $HOME ~/.Xresources # reload Xresources
-xss-lock slock &
-picom --experimental-backends &
-~/.xprofile &
-dbus-launch --exit-with-session dwm
