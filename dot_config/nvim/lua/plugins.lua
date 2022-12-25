@@ -19,10 +19,10 @@ require('packer').startup(function(use)
   -- use 'tpope/vim-rhubarb'                                                              -- Fugitive-companion to interact with github
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }            -- Add git related info in the signs columns and pop ups
 
-  --##QOL buffer chhanges 
+  --##QOL buffer changes 
   use 'numToStr/Comment.nvim'                                                          -- "gc" to comment visual regions/lines
-  use 'booperlv/nvim-gomove'                                                           --Move lines in a cool way
-  use 'jiangmiao/auto-pairs' --auto pair 
+  use 'booperlv/nvim-gomove'                                                            --Move lines in a cool way
+  use 'LunarWatcher/auto-pairs' --auto pair
   use 'tpope/vim-surround' -- change surrounding symbols ez "a"->(a)
   use 'chentoast/marks.nvim' --better marks
   use 'alvan/vim-closetag' --close html tags
@@ -33,6 +33,8 @@ require('packer').startup(function(use)
       require("true-zen").setup {}
 	end,
 }
+
+
   --##treesitter
   use 'nvim-treesitter/nvim-treesitter'                                                -- Highlight, edit, and navigate code
   use { 'nvim-treesitter/nvim-treesitter-textobjects', after = { 'nvim-treesitter' } } -- Additional textobjects for treesitter
@@ -79,6 +81,13 @@ require('packer').startup(function(use)
   use 'ellisonleao/gruvbox.nvim'
   use 'sainnhe/everforest'
   use 'roosta/srcery'
+
+  use {
+    'xiyaowong/nvim-transparent',
+    require("transparent").setup({
+      enable = true
+    })
+  }
 
   use 'goolord/alpha-nvim' --startup screen
 

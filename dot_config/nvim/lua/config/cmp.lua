@@ -63,7 +63,7 @@ cmp.setup {
       option = {
                 keep_all_entries = false,
                 enable_in_context = function()
-                    return true
+                    return require('cmp.config.context').in_treesitter_capture('spell')
                 end,
             },
     },
@@ -115,4 +115,9 @@ cmp.setup.cmdline("?", {
   },
 })
 
-
+-- local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+-- cmp.event:on(
+--   'confirm_done',
+--   cmp_autopairs.on_confirm_done()
+-- )
+--
