@@ -1,8 +1,8 @@
 -- [[ Setting options ]]
 --tab settings
-vim.o.softtabstop = true
-vim.o.tabstop = 3
-vim.o.shiftwidth = 3
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.noexpandtab = 1
 
 vim.opt.listchars:append('eol:')
 -- Set highlight on search
@@ -30,7 +30,7 @@ vim.wo.signcolumn = 'yes'
 
 -- Set colorscheme
 vim.o.termguicolors = true
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme everforest]]
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
@@ -67,5 +67,4 @@ vim.g.vimtex_compiler_latexmk = {
 
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
--- vim.cmd [[let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''",'*':'*','**':'**','~~':'~~',} ]]
 
