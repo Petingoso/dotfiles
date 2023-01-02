@@ -26,9 +26,9 @@ option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6\n$theme7"
 
 change_theme()
 {
-	cp ${hypr_dir}/$1.conf ${hypr_dir}/color.conf
+	cp ${hypr_dir}/$1.conf ${hypr_dir}/color.thmswitch
 	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
-	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.conf
+	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.thmswitch
 	cp ${waybar_dir}/all.css ${waybar_dir}/style.css
 	sed -i "s/\(colorscheme \)\(.*\)/\1$1]]/" $nvim_settings
 if [[ "$1" == "cozy-night" ]]; then
