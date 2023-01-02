@@ -23,6 +23,7 @@ Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, g
 - ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
 - ~~https://github.com/lauroro/hyprland-dotfiles (old config)~~ https://github.com/justleoo/dotfiles for most of the waybar config
 - https://github.com/adi1090x/rofi for amazing rofi themes
+- https://github.com/AmadeusWM/dotfiles-hyprland for the firefox theme
 Well not like anyone's gonna read this except but me but that's all folks
 
 ## Screenshots
