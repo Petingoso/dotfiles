@@ -3,33 +3,62 @@
 prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-2.rasi"
 
 option="
-alt + b                     toggle toggle pseudo-tiling
-alt + q                     close a program
+
 alt + shift + q             quit hyprland
-alt + space                 toggle floating on/off
-alt + arrows                change focus
-alt + tab                   move +1 workspace
-alt + shift +               move -1 workspace
-alt + shift + r             restart hyprland
+alt + shift + r             reload hyprland
+alt + space                 toggle floating 
+alt + q                     close a program
+alt + c                     toggle toggle pseudo-tiling
 alt + f                     toggle fullscreen
+
+alt + Enter		    launch terminal (kitty)
+alt + b			    toggle waybar
+alt + shift + t		    toggle notification center
+
+PrtScr			    save fullscreen screenshot
+super + PrtScr		    copy fullscreen screenshot to clipboard
+super + shift + Prtsc	    edit fullscreen screenshot
+super + shift + s	    copy area to clipboard
+
+alt + d			    app launcher (rofi)
+alt + t			    change theme 
+alt + control + x	    power menu
+alt + control + k	    this keybind menu 
+alt + shift + p		    lock screen
+
+alt + control + e	    enable bluelight filter 
+alt + control + r	    disable bluelight filter
+
 alt + 0-9                   go to the specified workspace
 alt + shift + 0-9           move selected window to the specified workspace
-alt +/shift .               move/send window to next monitor
-alt +/shift ,               move/send window to previous monitor
+
+alt + arrows                change window focus
 alt + hjkl                  change window focus
-alt + return/enter          open terminal
-alt + shift + p             lock screen
-alt + shift + n             open/close notification center
-alt + t                     open theme switcher
-alt + d                     open rofi
-alt + ctrl + r              turn on bluelight filter (gammastep)
-alt + ctrl + e              turn off bluelight filter (gammastep)
-prtsc                       take fullscreen screenshot now
-super + prtsc               take fullscreen screenshot to clipboard
-super +shift + prtsc        take fullscreen screenshot and edit 
-super + shift + s           take interactive screenshot 
+alt + shift + arrows        move window left/down/up/right
+alt + shift + hjkl	    move window left/down/up/right
+alt + control + h/l	    change tiled window size
+alt + control + left/right  change tiled window size
+
+alt + right click	    resize window
+alt + left click	    resize window
+
+alt + v			    change split type (vertical/horizontal)
+alt + shift + v		    toggle tabview (group windows)
+alt + n			    go foward in group
+alt + shift + n		    go backwards in group
+
+alt + s			    swap with master (master layout only)
+
+alt + tab                   move +1 workspace
+alt + shift + tab           move -1 workspace
+
+alt + [shift] + .               move/send window to next monitor
+alt + [shift] + ,               move/send window to previous monitor
+
+
 FN + F5                     increase brightness
 FN + F6                     decrease brightness
+
 FN + F3                     increase volume
 FN + F2                     decrease volumem
 FN + F1                     toggle mute on/off

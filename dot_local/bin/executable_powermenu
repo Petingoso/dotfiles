@@ -22,8 +22,8 @@ case $select in
 		loginctl reboot
 		;;
 	$lock)
-		~/scripts/lock.sh
+		loginctl lock-session
 		;;
 	$logout)
-		loginctl terminate-session 1
+		loginctl terminate-session self
 esac

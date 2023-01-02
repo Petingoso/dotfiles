@@ -9,7 +9,7 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
 - waybar with dynamic colors
 - hyprland personal config with themes (check before using)
 - same nvim and terminal
- **the theme switcher is theme_changer_wl and the keys hyp_bindings**
+ **the theme switcher is theme_changer_wl and the keys hyp_bindings (alt + control + k)**
  
  ## Dependencies
  This is not an intensive list but here's a reference
