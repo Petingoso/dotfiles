@@ -19,7 +19,7 @@ require'tabline'.setup {
         show_filename_only = false, -- shows base filename only instead of relative path in filename
         modified_icon = "+ ", -- change the default modified icon
         modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-        show_tabs_only = false, -- this shows only tabs instead of tabs + buffers
+        show_tabs_only = true, -- this shows only tabs instead of tabs + buffers
       }
     }
 

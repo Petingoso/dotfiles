@@ -28,13 +28,18 @@ require('packer').startup(function(use)
   use 'alvan/vim-closetag' --close html tags
   use { 'vladdoster/remember.nvim', config = [[ require('remember') ]] } --remember buffer position
   use 'ekickx/clipboard-image.nvim' --:PasteImg to paste an image
-  use 'https://github.com/ibhagwan/smartyank.nvim' --better yank
+  -- use {
+  --   'edluffy/hologram.nvim',
+  -- }
+
+  use 'github.com/ibhagwan/smartyank.nvim' --better yank
   use{ "Pocco81/true-zen.nvim",
     config = function()
       require("true-zen").setup {}
 	end,
 }
 
+  use 'https://github.com/rlue/vim-barbaric'
 
   --##treesitter
   use 'nvim-treesitter/nvim-treesitter'                                                -- Highlight, edit, and navigate code

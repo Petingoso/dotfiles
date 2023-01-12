@@ -1,4 +1,3 @@
-
 -- [[ Basic Keymaps ]]
 -- Set <space> as the leader key
 -- See `:help mapleader`
@@ -25,10 +24,10 @@ map('n', '<F10>', ":EnableAutocorrect<cr>", { silent = true, desc= "Enable autoc
 map('n', '<S-F10>', ":DisableAutocorrect<cr>", { silent = true, desc= "Disable autocorrect" })
 
 -- Diagnostic keymaps
-map('n', '<S-g>d', vim.diagnostic.goto_prev)
-map('n', '<S-g>f', vim.diagnostic.goto_next)
-map('n', '<leader>e', vim.diagnostic.open_float)
-map('n', '<leader>q', vim.diagnostic.setloclist)
+map('n', '<S-g>d', vim.diagnostic.goto_prev, { desc= "Go to previous lsp diagnostic" })
+map('n', '<S-g>f', vim.diagnostic.goto_next, { desc= "Go to next lsp diagnostic" })
+map('n', '<leader>f', vim.diagnostic.open_float, {desc = "Open diagnostic window"})
+map('n', '<leader>q', vim.diagnostic.setloclist, {desc= "List LSP diagnostics" })
 
 map( "n", "<S-h>", "<Plug>GoNSMLeft", {} )
 map( "n", "<S-j>", "<Plug>GoNSMDown", {} )
@@ -100,5 +99,5 @@ wk.register({
       ["gd"] = { vim.lsp.buf.definition, "[G]oto [D]efinition" },
       ["gi"] = { vim.lsp.buf.implementaion, "[G]oto [I]mplementation" },
   ["<leader>e"] = {"<cmd>Neotree toggle<cr>", "Toggle Explorer"},
-  ["<leader>o"] = {"<cmd>Neotree focus<cr>", "Toggle Explorer"}
+  ["<leader>o"] = {"<cmd>Neotree focus<cr>", "Focus Explorer"}
 })

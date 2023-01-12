@@ -12,6 +12,7 @@ pcloud1 & # cloud service
 xss-lock gtklock & # locking app
 swaync & # notif center
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & # polkit authenticaton
-fcitx5 & # japanese input 
+# fcitx5 & # japanese input 
 wl-clip-persist --clipboard regular & #persistent clipboard?
 wl-paste --watch cliphist store &
+/usr/lib/kdeconnectd & #kdeconnect daemon

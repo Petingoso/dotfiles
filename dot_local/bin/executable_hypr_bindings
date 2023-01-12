@@ -10,6 +10,7 @@ alt + space                 toggle floating
 alt + q                     close a program
 alt + c                     toggle toggle pseudo-tiling
 alt + f                     toggle fullscreen
+alt + g			    toggle gaps
 
 alt + Enter		    launch terminal (kitty)
 alt + b			    toggle waybar
