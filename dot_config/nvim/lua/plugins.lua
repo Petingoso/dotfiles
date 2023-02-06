@@ -79,6 +79,14 @@ require('packer').startup(function(use)
 		require("catppuccin").setup()
 	end
    }
+  use{
+    'rose-pine/neovim',
+    as = 'rose-pine',
+    config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+    end
+}
 
   use 'mjlbach/onedark.nvim'                                                           -- Theme inspired by Automatically
   use 'shaunsingh/nord.nvim'

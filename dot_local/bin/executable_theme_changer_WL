@@ -19,9 +19,10 @@ theme4=" Catppuccin (Macchiato)"
 theme5=" Gruvbox"
 theme6=" Srcery"
 theme7=" Cozy-Night"
+theme8=" Rosé Pine"
 
 # Variable to pass to dmenu or rofi
-option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6\n$theme7"
+option="$cancel\n$theme1\n$theme2\n$theme3\n$theme4\n$theme5\n$theme6\n$theme7\n$theme8"
 
 
 change_theme()
@@ -104,6 +105,13 @@ case $select in
 		swaybg -m fill -i $HOME/.config/wallpaper/abstract/dark-cat.png &
 		change_theme cozy-night
 		change_gtk_theme TokyoNight
+		$HOME/scripts/gtk2gsetting.sh
+		;;
+	$theme8)
+		pkill -kill swaybg
+		swaybg -m fill -i $HOME/.config/wallpaper/abstract/rose_pine_shape.png &
+		change_theme rose-pine
+		change_gtk_theme rose-pine-gtk
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	esac
