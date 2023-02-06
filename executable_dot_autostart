@@ -16,3 +16,8 @@ swaync & # notif center
 wl-clip-persist --clipboard regular & #persistent clipboard?
 wl-paste --watch cliphist store &
 /usr/lib/kdeconnectd & #kdeconnect daemon
+
+swayidle -w \
+    before-sleep "playerctl pause" \
+    timeout 600 "gtklock &" \
+    timeout 620 "systemctl suspend"

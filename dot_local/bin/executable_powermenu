@@ -8,21 +8,25 @@ shutdown=" Shutdown"
 reboot=" Restart"
 lock=" Lock"
 logout="﫼 Logout"
+suspend="🖪 Suspend"
 cancel="窱 Cancel"
 
-option="$cancel\n$shutdown\n$reboot\n$lock\n$logout"
+option="$cancel\n$shutdown\n$reboot\n$lock\n$suspend\n$logout"
 
 select="$(echo -e "$option" | $prompt -p "Uptime - $uptime")"
 
 case $select in
 	$shutdown)
-		loginctl poweroff
+		poweroff
 		;;
 	$reboot)
-		loginctl reboot
+		reboot
 		;;
 	$lock)
 		loginctl lock-session
+		;;
+	$suspend)
+		systemctl suspend
 		;;
 	$logout)
 		loginctl terminate-session self

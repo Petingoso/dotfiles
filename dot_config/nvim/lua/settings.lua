@@ -36,11 +36,6 @@ vim.cmd [[colorscheme everforest]]
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
---set wiki.vim root and filetypes
-vim.g.wiki_root = '~/Documents/notes/'
-vim.g.wiki_filetypes = {'md', 'markdown', 'wiki'}
-vim.g.wiki_link_extension = '.md'
-vim.g.wiki_link_target_type = 'md'
 
 --enable spellchecking
 vim.o.spell = true
@@ -66,6 +61,16 @@ vim.g.vimtex_compiler_latexmk = {
   }
 }
 
+--set wiki.vim root and filetypes
+vim.g.wiki_root = '~/Documents/notes/'
+vim.g.wiki_filetypes = {'md', 'markdown', 'wiki'}
+vim.g.wiki_link_extension = '.md'
+vim.g.wiki_link_target_type = 'md'
+vim.cmd [[let g:wiki_export = {
+        \ 'args' : '--pdf-engine=xelatex -F mermaid-filter --template=gothic.tex',
+        \ 'view' : v:true,
+        \ 'output': 'school/exported',
+        \}]]
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
 
