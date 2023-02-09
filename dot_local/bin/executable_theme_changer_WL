@@ -109,7 +109,7 @@ case $select in
 		;;
 	$theme8)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/abstract/rose_pine_shape.png &
+		swaybg -m fill -i $HOME/.config/wallpaper/anime/ign_duaAnime.png &
 		change_theme rose-pine
 		change_gtk_theme rose-pine-gtk
 		$HOME/scripts/gtk2gsetting.sh
