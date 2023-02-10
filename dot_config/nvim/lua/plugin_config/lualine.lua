@@ -7,6 +7,7 @@ local options = {
     component_separators = { left = '', right = ''},
     section_separators = { left = '', right = ''},
     disabled_filetypes = {
+      'packer', 'neo-tree',
       statusline = {},
       winbar = {},
     },
@@ -21,14 +22,14 @@ local options = {
   },
   sections = {
     lualine_a = {
-      { 'mode', separator = { left = '', right = '' } }
+      { 'mode', separator = { right = '' } }
     },
     lualine_b = {'diagnostics'},
     lualine_c = {},
     lualine_x = {'encoding', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {
-      { 'location', separator = { right = '' } }
+      { 'location'}
     },
   },
   inactive_sections = {
@@ -44,7 +45,7 @@ local options = {
       {
         'buffers',
         --show_filename_only = true,
-        icons_enabled = false,
+        icons_enabled = true,
         symbols = {
           modified = ' ●',      -- Text to show when the buffer is modified
           alternate_file = '絛', -- Text to show to identify the alternate file
@@ -61,7 +62,7 @@ local options = {
   winbar = {},
   inactive_winbar = {},
   extensions = {
-    "nvim-tree",
+    "neo-tree",
   }
 }
 

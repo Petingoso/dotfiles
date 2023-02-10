@@ -27,6 +27,7 @@ map('n', "<leader>zm", ":TZMinimalist<CR>", { desc = "Toggle Minimal Zen Mode" }
 
 map('n', "<leader>e" , "<cmd>Neotree toggle<cr>", { desc = "Toggle Explorer" })
 map('n', "<leader>o" , "<cmd>Neotree focus<cr>" , { desc = "Focus Explorer" })
+map('n', "<leader>cd" ,"<cmd>cd ..<cr>" , { desc = "[C]hange [D]irectory Up" })
 
 -- Telescope
 map('n', "<C-P>t"     , "<cmd>Telescope<CR>"   ,{ desc = "Open Telescope" })
