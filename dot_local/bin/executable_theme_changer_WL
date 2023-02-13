@@ -5,7 +5,7 @@ hypr_dir="$HOME/.config/hypr/themes"
 rofi_dir="$HOME/.config/rofi/colors"
 kitty_dir="$HOME/.config/kitty"
 waybar_dir="$HOME/.config/waybar"
-nvim_settings="$HOME/.config/nvim/lua/settings.lua"
+nvim_settings="$HOME/.config/nvim/lua/core/settings.lua"
 
 # prompt="dmenu -l 9 "
 prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi"

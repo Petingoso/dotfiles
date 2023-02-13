@@ -98,4 +98,4 @@ vim.cmd [[let g:wiki_export = {
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
 
-vim.cmd [[colorscheme nord]]
+vim.cmd [[colorscheme everforest]]
