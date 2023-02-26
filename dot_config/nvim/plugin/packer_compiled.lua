@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/everforest",
     url = "https://github.com/sainnhe/everforest"
   },
+  ["formatter.nvim"] = {
+    loaded = true,
+    path = "/home/petarch/.local/share/nvim/site/pack/packer/start/formatter.nvim",
+    url = "https://github.com/mhartington/formatter.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/friendly-snippets",

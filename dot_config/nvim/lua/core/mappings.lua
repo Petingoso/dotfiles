@@ -14,8 +14,8 @@ map({ 'n', 'v' }, '<Space>', '<Nop>'                , { silent = true }) -- spac
 map('t'         , "<ESC>"  , "<CR><C-d><CR>"        , {}) -- Exit terminal with esc
 map('n'         , "<C-x>"  , "<cmd>!xdg-open %<CR>" , { desc = "Open file on xdg-open" })
 
-map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true }) -- Remap for dealing with word wrap
-map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
+-- map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true }) -- Remap for dealing with word wrap
+-- map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 map('n', '<F11>'  , ":set spell!<cr>"         , { silent = true, desc = "Toggle spell" })
 map('i', '<F11>'  , "<C-O>:set spell!<cr>"    , { silent = true })
@@ -38,11 +38,9 @@ map('n', "<leader>sw", require('telescope.builtin').grep_string , { desc = "[S]e
 map('n', "<leader>sg", require('telescope.builtin').live_grep   , { desc = "[S]earch by [G]rep" })
 map('n', "<leader>sd", require('telescope.builtin').diagnostics , { desc = "[S]earch by [D]iagnostics" })
 map('n', "<leader>st", require("telescope.builtin").oldfiles    , {desc = "[S]earch his[T]ory" })
-map('n', "<leader>?" , require('telescope.builtin').oldfiles    , { desc = "[?] Find recently opened files" })
-map('n', "<leader><space>", require('telescope.builtin').buffers, { desc = "[  ] Find existing buffers" })
-map('n', '<leader>/', function()
+map('n', "<leader>s<space>", require('telescope.builtin').buffers, { desc = "[  ] Find existing buffers" })
+map('n', '<leader>s/', function()
 require('telescope.builtin').current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    winblend = 10,
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer]' })
@@ -52,22 +50,22 @@ end, { desc = '[/] Fuzzily search in current buffer]' })
 map('n', "<leader>rn", vim.lsp.buf.rename       , { desc = "[R]e[n]ame" })
 map('n', "<leader>ca", vim.lsp.buf.code_action  , { desc = "[C]ode [A]ction" })
 map('n', "gd"        , vim.lsp.buf.definition   , { desc = "[G]oto [D]efinition" })
-map('n', "gi"        , vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
+-- map('n', "gi"        , vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
 map('n', '<leader>ds', require('telescope.builtin').lsp_document_symbols, { desc = '[D]ocument [S]ymbols'})
 map('n', '<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, { desc = '[W]orkspace [S]ymbols'})
 
   -- See `:help K` for why this keymap
-map('n', 'K', vim.lsp.buf.hover, { desc ='Hover Documentation'})
-map('n', '<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation'})
+-- map('n', 'K', vim.lsp.buf.hover, { desc ='Hover Documentation'})
+-- map('n', '<C-k>', vim.lsp.buf.signature_help, { desc = 'Signature Documentation'})
 
   -- Lesser used LSP functionality
-map('n', 'gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration'})
-map('n', '<leader>D', vim.lsp.buf.type_definition, { desc = 'Type [D]efinition'})
-map('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder'})
-map('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc ='[W]orkspace [R]emove Folder'})
-map('n', '<leader>wl', function()
-    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-  end, { desc = '[W]orkspace [L]ist Folders'})
+-- map('n', 'gD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration'})
+-- map('n', '<leader>td', vim.lsp.buf.type_definition, { desc = '[T]ype [D]efinition'})
+-- map('n', '<leader>wa', vim.lsp.buf.add_workspace_folder, { desc = '[W]orkspace [A]dd Folder'})
+-- map('n', '<leader>wr', vim.lsp.buf.remove_workspace_folder, { desc ='[W]orkspace [R]emove Folder'})
+-- map('n', '<leader>wl', function()
+    -- print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+  -- end, { desc = '[W]orkspace [L]ist Folders'})
 
 
 
@@ -75,7 +73,7 @@ map('n', '<leader>wl', function()
 map('n', '<S-g>d'   , vim.diagnostic.goto_prev  , { desc= "Go to previous lsp diagnostic" })
 map('n', '<S-g>f'   , vim.diagnostic.goto_next  , { desc= "Go to next lsp diagnostic" })
 map('n', '<leader>f', vim.diagnostic.open_float , { desc = "Open diagnostic window"})
-map('n', '<leader>q', require('telescope.builtin').lsp_references, { desc = "List LSP diagnostics" })
+-- map('n', '<leader>q', require('telescope.builtin').lsp_references, { desc = "List LSP diagnostics" })
 
 
 -- Gomove, for moving blocks
@@ -114,8 +112,6 @@ map('n', "<C-Right>", function() require("smart-splits").resize_right() end , {d
 
 
 -- Buffer and Tab management
-map('n', "<S-lt>" , "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer tab" })
-map('n', "<S-ht>" , "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous buffer tab" })
 map('n', "<S-l>"  , "<cmd>bnext<cr>"              , { desc = "Next buffer" })
 map('n', "<S-h>"  , "<cmd>bprevious<cr>"          , { desc = "Previous buffer" })
 

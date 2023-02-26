@@ -67,6 +67,8 @@ require('packer').startup(
     use {'williamboman/mason.nvim'} -- Manage external editor tooling i.e LSP servers
     use {'williamboman/mason-lspconfig.nvim'} -- Automatically install language servers to stdpath
 
+    use {'mhartington/formatter.nvim'} -- formatter config
+
     --location, gps sucessor
     use {
        "SmiteshP/nvim-navic",
