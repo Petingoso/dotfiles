@@ -9,6 +9,7 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
 - waybar with dynamic colors
 - hyprland personal config with themes (check before using)
 - same nvim and terminal
+- firefox auto switches with pywalfox
  **the theme switcher is theme_changer_wl and the keys hyp_bindings (alt + control + k)**
  
  ## Dependencies
@@ -16,14 +17,14 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  
  Main setup: `wayland, hyprland-waybar-git, swaync, swaybg, waybar(patch for hyprland, check wiki), libinput-gestures-setup, grim, slur, swappy, wl-copy, rofi-lbonn-wayland, gammmastep, gtklock`
   
-Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, gnome-polkit, pulseaudio, light, ranger`
+Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, gnome-polkit, pulseaudio, light, ranger, firefox, python-pywalfox, python-pywal`
   
   That should be about it.
 ## I think it looks really cool but most of it is stolen so credits to
 - ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
 - ~~https://github.com/lauroro/hyprland-dotfiles (old config)~~ https://github.com/justleoo/dotfiles for most of the waybar config
 - https://github.com/adi1090x/rofi for amazing rofi themes
-- https://github.com/AmadeusWM/dotfiles-hyprland for the firefox theme
+- ~~https://github.com/AmadeusWM/dotfiles-hyprland for the firefox theme~~ pywalfox and a small custom theme, the new tab is still theirs tho
 Well not like anyone's gonna read this except but me but that's all folks
 
 ## Screenshots
