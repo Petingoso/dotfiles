@@ -134,11 +134,6 @@ _G.packer_plugins = {
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["dracula.nvim"] = {
-    loaded = true,
-    path = "/home/petarch/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
-  },
   everforest = {
     loaded = true,
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/everforest",
@@ -368,6 +363,11 @@ _G.packer_plugins = {
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
   },
+  ["vim-solarized"] = {
+    loaded = true,
+    path = "/home/petarch/.local/share/nvim/site/pack/packer/start/vim-solarized",
+    url = "https://github.com/ericbn/vim-solarized"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/petarch/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -397,22 +397,22 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: todo-comments.nvim
-time([[Config for todo-comments.nvim]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
-time([[Config for todo-comments.nvim]], false)
--- Config for: remember.nvim
-time([[Config for remember.nvim]], true)
- require('remember') 
-time([[Config for remember.nvim]], false)
--- Config for: true-zen.nvim
-time([[Config for true-zen.nvim]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrue-zen\frequire\0", "config", "true-zen.nvim")
-time([[Config for true-zen.nvim]], false)
 -- Config for: pretty-fold.nvim
 time([[Config for pretty-fold.nvim]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16pretty-fold\frequire\0", "config", "pretty-fold.nvim")
 time([[Config for pretty-fold.nvim]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: true-zen.nvim
+time([[Config for true-zen.nvim]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\rtrue-zen\frequire\0", "config", "true-zen.nvim")
+time([[Config for true-zen.nvim]], false)
+-- Config for: remember.nvim
+time([[Config for remember.nvim]], true)
+ require('remember') 
+time([[Config for remember.nvim]], false)
 -- Config for: which-key.nvim
 time([[Config for which-key.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")

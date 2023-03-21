@@ -20,4 +20,4 @@ wl-paste --watch cliphist store &
 swayidle -w \
     before-sleep "playerctl pause" \
     timeout 600 "gtklock &" \
-    timeout 620 "systemctl suspend"
+    timeout 720 "systemctl suspend"

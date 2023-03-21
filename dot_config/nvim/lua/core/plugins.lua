@@ -112,17 +112,12 @@ require('packer').startup(
     use {'rose-pine/neovim'}
     use {'shaunsingh/nord.nvim'}
     use {'folke/tokyonight.nvim'}
-    use {'Mofiqul/dracula.nvim'}
+    use {"ericbn/vim-solarized"}
     use {'ellisonleao/gruvbox.nvim'}
     use {'sainnhe/everforest'}
     use {'roosta/srcery'}
 
-    use {
-      'xiyaowong/nvim-transparent',
-      require("transparent").setup({
-	enable = true
-      })
-    }
+    use {'xiyaowong/nvim-transparent'}
 
     use {'goolord/alpha-nvim'} --startup screen
 

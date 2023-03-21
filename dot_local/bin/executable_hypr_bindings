@@ -4,7 +4,7 @@ prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-2.rasi"
 
 option="
 
-alt + shift + q             quit hyprland
+alt + control + q           quit hyprland
 alt + shift + r             reload hyprland
 alt + space                 toggle floating 
 alt + q                     close a program

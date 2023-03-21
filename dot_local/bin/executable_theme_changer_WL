@@ -14,7 +14,7 @@ prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-3.rasi"
 cancel="窱 Cancel"
 theme1=" Nord"
 theme2=" Everforest"
-theme3=" Dracula"
+theme3=" Solarized"
 theme4=" Catppuccin (Macchiato)"
 theme5=" Gruvbox"
 theme6=" Srcery"
@@ -46,6 +46,8 @@ elif [[ "$1" == "everforest" ]]; then
 	fi
 
 	hyprctl reload # restart hyprland
+	kill -USR1 $(pidof kitty) #restart kitty
+	pywalfox update
 }
 
 
@@ -56,11 +58,13 @@ change_gtk_theme()
    sed -e "s/^gtk-theme-name=.*/gtk-theme-name=\""$@"\"/" -i $HOME/.gtkrc-2.0 
 }
 
+
 select="$(echo -e "$option" | $prompt -p "Choose a theme: " )"
 case $select in
 	$theme1)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/minimal/ign_chomusuke.png &
+		wal -i $HOME/.config/wallpaper/minimal/ign_chomusuke.png -n -s -t
 		change_theme nord
 		change_gtk_theme Nordic
 		$HOME/scripts/gtk2gsetting.sh
@@ -68,20 +72,23 @@ case $select in
 	$theme2)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/detail/leaves-2.jpg &
+		wal -i $HOME/.config/wallpaper/detail/leaves-2.jpg -n -s -t
 		change_theme everforest
 		change_gtk_theme everforest
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme3)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/distro/archdracula.png &
-		change_theme dracula
-		change_gtk_theme Dracula
+		swaybg -m fill -i $HOME/.config/wallpaper/abstract/solarized-mountains.png &
+		wal -i $HOME/.config/wallpaper/abstract/solarized-mountains.png -n -s -t 	
+		change_theme solarized
+		change_gtk_theme NumixSolarizedDarkRed
 		$HOME/scripts/gtk2gsetting.sh
 		;;
 	$theme4)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/abstract/cat-waves.png &
+		wal -i $HOME/.config/wallpaper/abstract/cat-waves.png -n -s -t
 		change_theme catppuccin_macchiato
 		change_gtk_theme Catppuccin-Macchiato-Standard-Red-Dark
 		$HOME/scripts/gtk2gsetting.sh
@@ -89,6 +96,7 @@ case $select in
 	$theme5)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/paisages/mountain.jpeg &
+		wal -i $HOME/.config/wallpaper/paisages/mountain.jpeg -n -s -t
 		change_theme gruvbox
 		change_gtk_theme Gruvbox-Material-Dark
 		$HOME/scripts/gtk2gsetting.sh
@@ -96,6 +104,7 @@ case $select in
 	$theme6)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/detail/bush.jpg &
+		wal -i $HOME/.config/wallpaper/detail/bush.jpg -n -s -t	
 		change_theme srcery
 		change_gtk_theme oomox-srcery
 		$HOME/scripts/gtk2gsetting.sh
@@ -103,6 +112,7 @@ case $select in
 	$theme7)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/abstract/dark-cat.png &
+		wal -i $HOME/.config/wallpaper/abstract/dark-cat.png -n -s -t	
 		change_theme cozy-night
 		change_gtk_theme TokyoNight
 		$HOME/scripts/gtk2gsetting.sh
@@ -110,6 +120,7 @@ case $select in
 	$theme8)
 		pkill -kill swaybg
 		swaybg -m fill -i $HOME/.config/wallpaper/anime/ign_duaAnime.png &
+		wal -i $HOME/.config/wallpaper/anime/ign_duaAnime.png -n -s -t	
 		change_theme rose-pine
 		change_gtk_theme rose-pine-gtk
 		$HOME/scripts/gtk2gsetting.sh
