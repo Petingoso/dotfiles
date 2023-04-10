@@ -25,6 +25,7 @@ Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, g
 - ~~https://github.com/lauroro/hyprland-dotfiles (old config)~~ https://github.com/justleoo/dotfiles for most of the waybar config
 - https://github.com/adi1090x/rofi for amazing rofi themes
 - ~~https://github.com/AmadeusWM/dotfiles-hyprland for the firefox theme~~ pywalfox and a small custom theme, the new tab is still theirs tho
+- https://github.com/junnunkarim/dotfiles-linux Most of it was based on him and I still many times take from there
 Well not like anyone's gonna read this except but me but that's all folks
 
 ## Screenshots
