@@ -48,6 +48,7 @@ elif [[ "$1" == "everforest" ]]; then
 	hyprctl reload # restart hyprland
 	kill -USR1 $(pidof kitty) #restart kitty
 	pywalfox update
+	# wal-discord -t -b wal
 }
 
 
@@ -79,8 +80,8 @@ case $select in
 		;;
 	$theme3)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/abstract/solarized-mountains.png &
-		wal -i $HOME/.config/wallpaper/abstract/solarized-mountains.png -n -s -t 	
+		swaybg -m fill -i $HOME/.config/wallpaper/pixelart/sea1_solarized.png &
+		wal -i $HOME/.config/wallpaper/pixelart/sea1_solarized.png -n -s -t 	
 		change_theme solarized
 		change_gtk_theme NumixSolarizedDarkRed
 		$HOME/scripts/gtk2gsetting.sh
@@ -119,8 +120,8 @@ case $select in
 		;;
 	$theme8)
 		pkill -kill swaybg
-		swaybg -m fill -i $HOME/.config/wallpaper/anime/ign_duaAnime.png &
-		wal -i $HOME/.config/wallpaper/anime/ign_duaAnime.png -n -s -t	
+		swaybg -m fill -i $HOME/.config/wallpaper/anime/wondering.jpg &
+		wal -i $HOME/.config/wallpaper/anime/wondering.jpg -n -s -t	
 		change_theme rose-pine
 		change_gtk_theme rose-pine-gtk
 		$HOME/scripts/gtk2gsetting.sh

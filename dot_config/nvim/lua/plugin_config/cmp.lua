@@ -120,4 +120,3 @@ cmp.setup.cmdline("?", {
 --   'confirm_done',
 --   cmp_autopairs.on_confirm_done()
 -- )
---

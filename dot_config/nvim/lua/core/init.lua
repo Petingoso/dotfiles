@@ -1,4 +1,3 @@
-require("impatient")
-require("core.plugins")
+require("core.lazy")
 require("core.settings")
 require("core.mappings")
