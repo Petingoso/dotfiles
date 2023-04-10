@@ -20,23 +20,3 @@ end
 -- nvim-cmp supports additional completion capabilities
 local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-
--- Setup mason so it can manage external tooling
-require('mason').setup()
-require("mason-lspconfig").setup()
-require("mason-lspconfig").setup_handlers {
-  function (server_name)
-  require("lspconfig")[server_name].setup{}
-  end,
--- require('lspconfig')['ltex'].setup({
---   settings = {
---     ltex = {
---       language = "auto",
---         additionalRules = {
---         motherToungue = "pt",
---         }
---     }
---   }
--- })
-}
-

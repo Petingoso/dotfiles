@@ -22,7 +22,13 @@ cmp.setup {
     end,
   },
     formatting = {
-    format = lspkind.cmp_format({ with_text = true, maxwidth = 100 }),
+    -- format = lspkind.cmp_format({ with_text = true, maxwidth = 100 }),
+    format = function(entry, vim_item)
+      vim_item.abbr = ' ' .. vim_item.abbr
+      vim_item.menu = (vim_item.menu or '') .. ' '
+      return vim_item
+    end
+
   },
 
   mapping = cmp.mapping.preset.insert {
@@ -55,7 +61,6 @@ cmp.setup {
   sources = {
     { name = "luasnip" },
     { name = "nvim_lsp" },
-    { name = "omni" },
     { name = 'buffer' },
     { name = "nvim_lua" },
     { name = 'path' },
@@ -69,14 +74,15 @@ cmp.setup {
     },
   },
   window = {
-    completion = cmp.config.window.bordered(),
+    completion = cmp.config.window.bordered(
+    ),
     documentation = cmp.config.window.bordered(),
   },
   experimental = {
     ghost_text = true,
   },
   view = {
-    native_menu = true,
+    native_menu = false,
   },
 }
 

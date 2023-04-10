@@ -31,8 +31,7 @@ local plugins = {
  	{'ekickx/clipboard-image.nvim' }, --:PasteImg to paste an image
  	{'ibhagwan/smartyank.nvim'},  --better yank
  	{'rlue/vim-barbaric'}, -- for switching languages dynamically
- 	{"NvChad/nvim-colorizer.lua" }, --preview colors
-
+ 	{"NvChad/nvim-colorizer.lua" }, --preview colors 
 	{
 	'vladdoster/remember.nvim',
 	config = [[ require('remember') ]]
@@ -62,9 +61,12 @@ local plugins = {
 	{'onsails/lspkind.nvim'},
 	{ "folke/lsp-colors.nvim" },
 
+	{"mfussenegger/nvim-dap"}, --debugging protocol
+	{"rcarriga/nvim-dap-ui"},
 
 	{'williamboman/mason.nvim'}, -- Manage external editor tooling i.e LSP servers
 	{'williamboman/mason-lspconfig.nvim'}, -- Automatically install language servers to stdpath
+	{'jay-babu/mason-nvim-dap.nvim'}, --mason for dap
 
 	{'mhartington/formatter.nvim'}, -- formatter config
 
@@ -107,13 +109,13 @@ local plugins = {
     	}, -- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
 
     -- Themes
-    	{'catppuccin/nvim', as = "catppuccin" },
+    	{'catppuccin/nvim', name = "catppuccin" },
     	{'rose-pine/neovim'},
     	{'shaunsingh/nord.nvim'},
     	{'folke/tokyonight.nvim'},
     	{"ericbn/vim-solarized"},
     	{'ellisonleao/gruvbox.nvim'},
-	  	{'sainnhe/everforest'},
+	{'sainnhe/everforest'},
     	{'roosta/srcery'},
 
     	{'xiyaowong/nvim-transparent'},
@@ -138,7 +140,8 @@ local plugins = {
     	},
 
 
-	{"NvChad/nvterm"}, --floating term
+	-- {"NvChad/nvterm"}, --floating term
+	{"voldikss/vim-floaterm"}, --toggle term
 
 	{
       	"folke/todo-comments.nvim",

@@ -5,14 +5,16 @@
 vim.g.mapleader = 'ç'
 vim.g.maplocalleader = ','
 local map = vim.keymap.set
-
--- Keymaps for better default experience
+-- Keymaps for better default experience 
 -- See `:help map()`
+local dap_ok, dap = pcall(require, "dap")
+local dap_ui_ok, ui = pcall(require, "dapui")
 
 --Misc Keymaps 
-map({ 'n', 'v' }, '<Space>', '<Nop>'                , { silent = true }) -- space not do anything on visual
-map('t'         , "<ESC>"  , "<CR><C-d><CR>"        , {}) -- Exit terminal with esc
-map('n'         , "<C-x>"  , "<cmd>!xdg-open %<CR>" , { desc = "Open file on xdg-open" })
+map({ 'n', 'v' }, '<Space>', '<Nop>'                 , { silent = true }) -- space not do anything on visual
+map('n'         , "<C-x>"  , "<cmd>!xdg-open %<CR>"  , { desc = "Open file on xdg-open" })
+map( {'n','v','t'}, '<C-t>'  , '<C-Bslash><C-N>:FloatermToggle<CR>'      , {desc="Toggle Terminal"})
+
 
 -- map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true }) -- Remap for dealing with word wrap
 -- map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
@@ -126,3 +128,32 @@ map('n', "<leader>gr", function() require("gitsigns").reset_buffer() end    , {d
 map('n', "<leader>gs", function() require("gitsigns").stage_hunk() end      , {desc = "Stage git hunk" })
 map('n', "<leader>gu", function() require("gitsigns").undo_stage_hunk() end , {desc = "Unstage git hunk" })
 map('n', "<leader>gd", function() require("gitsigns").diffthis() end        , {desc = "View git diff" })
+
+--Debugging
+vim.fn.sign_define('DapBreakpoint', { text = '🐞' })
+
+-- Start debugging session
+map("n", "<localleader>ds", function()
+  dap.continue()
+  ui.toggle({})
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-w>=", false, true, true), "n", false) -- Spaces buffers evenly
+end, {desc="Start [D]ebug [S]ession"})
+
+-- Set breakpoints, get variable values, step into/out of functions, etc.
+map("n", "<localleader>dl", require("dap.ui.widgets").hover)
+map("n", "<localleader>dc", dap.continue, { desc = "DAP continue" })
+map("n", "<localleader>db", dap.toggle_breakpoint, { desc = "DAP toggle breakpoint" })
+map("n", "<localleader>dn", dap.step_over, { desc = "DAP step next" })
+map("n", "<localleader>di", dap.step_into, { desc = "DAP step into" })
+map("n", "<localleader>do", dap.step_out,  { desc = "DAP setp out"})
+map("n", "<localleader>dC", function()
+  dap.clear_breakpoints()
+end, {desc = "DAP Clear Breakpoints"})
+--
+-- Close debugger and clear breakpoints
+map("n", "<localleader>de", function()
+  dap.clear_breakpoints()
+  ui.toggle({})
+  dap.terminate()
+  vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-w>=", false, true, true), "n", false)
+end, { desc= "[D]ebug [E]xit" })
