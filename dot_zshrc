@@ -117,6 +117,7 @@ alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ &
 alias xgo='xdg-open'
 alias krita='krita'
 alias kcli='kdeconnect-cli -n M2012K11AG'
+alias sgcc=" g++ -Werror -pedantic-errors -ggdb -Wall -Weffc++ -Wextra -Wsign-conversion -std=c++20"
 
 #-------VARIABLES-------
 export notes="/home/petarch/Documents/notes"

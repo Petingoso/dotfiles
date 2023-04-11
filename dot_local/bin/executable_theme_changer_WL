@@ -69,6 +69,7 @@ case $select in
 		change_theme nord
 		change_gtk_theme Nordic
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Nord"/g' "$HOME/.config/VSCodium/User/settings.json"
 		;;
 	$theme2)
 		pkill -kill swaybg
@@ -77,6 +78,7 @@ case $select in
 		change_theme everforest
 		change_gtk_theme everforest
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Everforest Dark"/g' "$HOME/.config/VSCodium/User/settings.json"
 		;;
 	$theme3)
 		pkill -kill swaybg
@@ -85,6 +87,8 @@ case $select in
 		change_theme solarized
 		change_gtk_theme NumixSolarizedDarkRed
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Solarized Dark+"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	$theme4)
 		pkill -kill swaybg
@@ -93,6 +97,8 @@ case $select in
 		change_theme catppuccin_macchiato
 		change_gtk_theme Catppuccin-Macchiato-Standard-Red-Dark
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Catppuccin Frappé"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	$theme5)
 		pkill -kill swaybg
@@ -101,6 +107,8 @@ case $select in
 		change_theme gruvbox
 		change_gtk_theme Gruvbox-Material-Dark
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Gruvbox Dark Medium"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	$theme6)
 		pkill -kill swaybg
@@ -109,6 +117,8 @@ case $select in
 		change_theme srcery
 		change_gtk_theme oomox-srcery
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Srcery"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	$theme7)
 		pkill -kill swaybg
@@ -117,6 +127,8 @@ case $select in
 		change_theme cozy-night
 		change_gtk_theme TokyoNight
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Tokyo Night"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	$theme8)
 		pkill -kill swaybg
@@ -125,5 +137,7 @@ case $select in
 		change_theme rose-pine
 		change_gtk_theme rose-pine-gtk
 		$HOME/scripts/gtk2gsetting.sh
+		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Rosé Pine Dawm"/g' "$HOME/.config/VSCodium/User/settings.json"
+
 		;;
 	esac

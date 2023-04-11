@@ -16,8 +16,6 @@ map('n'         , "<C-x>"  , "<cmd>!xdg-open %<CR>"  , { desc = "Open file on xd
 map( {'n','v','t'}, '<C-t>'  , '<C-Bslash><C-N>:FloatermToggle<CR>'      , {desc="Toggle Terminal"})
 
 
--- map('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true }) -- Remap for dealing with word wrap
--- map('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 map('n', '<F11>'  , ":set spell!<cr>"         , { silent = true, desc = "Toggle spell" })
 map('i', '<F11>'  , "<C-O>:set spell!<cr>"    , { silent = true })
@@ -26,6 +24,7 @@ map('n', '<S-F10>', ":DisableAutocorrect<cr>" , { silent = true, desc = "Disable
 
 map('n', "<leader>zm", ":TZMinimalist<CR>", { desc = "Toggle Minimal Zen Mode" })
 
+map('n', "<localleader>f", ":Format<CR>", { desc = "Call Formatter" })
 
 map('n', "<leader>e" , "<cmd>Neotree toggle<cr>", { desc = "Toggle Explorer" })
 map('n', "<leader>o" , "<cmd>Neotree focus<cr>" , { desc = "Focus Explorer" })

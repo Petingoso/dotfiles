@@ -99,3 +99,8 @@ vim.cmd [[let g:wiki_export = {
 vim.g.AutoPairsMapBS = 1
 
 vim.cmd [[colorscheme everforest]]
+
+-- vim.cmd([[augroup FormatAutogroup
+--   autocmd!
+--   autocmd BufWritePost * FormatWrite
+-- augroup END]])
