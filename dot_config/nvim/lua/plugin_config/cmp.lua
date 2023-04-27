@@ -33,10 +33,12 @@ cmp.setup({
         { name = "nvim-lua" },
         { name = "path" },
         { name = 'spell',
+                priority = -1,
                 option = {
                 keep_all_entries = false,
                 enable_in_context = function()
-                    return require('cmp.config.context').in_treesitter_capture('spell')
+                -- return require('cmp.config.context').in_treesitter_capture('spell')
+                    return true
                 end,
                          },
         },
@@ -48,15 +50,10 @@ cmp.setup({
         },
     }),
     window = {
-        -- completion = cmp.config.window.bordered({
-        --     winhighlight = "",
-        --     col_offset = -3,
-        --     side_padding = 0,
-        -- }),
-        -- documentation = cmp.config.window.bordered({
-        --     winhighlight = "",
-        -- }),
-        completion = cmp.config.window.bordered(),
+        completion = cmp.config.window.bordered({
+            -- col_offset = -3,
+            side_padding = 0,
+        }),
         documentation = cmp.config.window.bordered(),
 
     },

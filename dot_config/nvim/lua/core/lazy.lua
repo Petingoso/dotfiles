@@ -68,6 +68,7 @@ local plugins = {
 	{'williamboman/mason-lspconfig.nvim'}, -- Automatically install language servers to stdpath
 	{'jay-babu/mason-nvim-dap.nvim'}, --mason for dap
 
+	-- {'mfussenegger/nvim-lint'},
 	{'mhartington/formatter.nvim'}, -- formatter config
 
     --location, gps sucessor
@@ -130,6 +131,8 @@ local plugins = {
 
 
     --file manager 
+	{"kevinhwang91/rnvimr"},
+
 	{
       	"nvim-neo-tree/neo-tree.nvim",
 	dependencies = {
@@ -138,6 +141,7 @@ local plugins = {
 		"MunifTanjim/nui.nvim",
       			}
     	},
+
 
 
 	-- {"NvChad/nvterm"}, --floating term
@@ -152,6 +156,14 @@ local plugins = {
       	}, --todo comments magic
 
 	{'mrjones2014/smart-splits.nvim' }, --better spliting
+	{
+	 "anuvyklack/windows.nvim",
+	 dependencies = {
+	    "anuvyklack/middleclass"},
+	 config = function()
+	    require('windows').setup()
+	 end
+ 	},
 
 
     --folds that look nice
@@ -167,7 +179,7 @@ local plugins = {
 	"iamcco/markdown-preview.nvim",
 	build = function() vim.fn["mkdp#util#install"]() end,
 	},
-	
+
 	{'lervag/vimtex'}, --latex completion and previewing
 
     --vim wiki, markdown collection
@@ -181,6 +193,5 @@ local plugins = {
       	end
        	},
 }
-
 require("lazy").setup(plugins, lazy_options)
 

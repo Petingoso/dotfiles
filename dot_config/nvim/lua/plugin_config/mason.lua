@@ -4,7 +4,7 @@ require('mason').setup()
 require('mason-nvim-dap').setup({
       automatic_setup = true,
       ensure_installed = {},
-    handlers = {
+      handlers = {
         function(config)
           -- all sources with no handler get passed here
           -- Keep original functionality

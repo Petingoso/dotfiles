@@ -26,8 +26,9 @@ map('n', "<leader>zm", ":TZMinimalist<CR>", { desc = "Toggle Minimal Zen Mode" }
 
 map('n', "<localleader>f", ":Format<CR>", { desc = "Call Formatter" })
 
-map('n', "<leader>e" , "<cmd>Neotree toggle<cr>", { desc = "Toggle Explorer" })
-map('n', "<leader>o" , "<cmd>Neotree focus<cr>" , { desc = "Focus Explorer" })
+map('n', "<leader>e" , ":RnvimrToggle<CR>" , { desc = "Toggle Explorer" })
+map('t', "<leader>e" , "<C-Bslash><C-n>:RnvimrToggle<CR>" , { desc = "Toggle Explorer from window" })
+map('n', "<leader>o" , ":NeoTreeFocusToggle<CR>" , { desc = "Resize Explorer" })
 map('n', "<leader>cd" ,"<cmd>cd ..<cr>" , { desc = "[C]hange [D]irectory Up" })
 
 -- Telescope

@@ -105,8 +105,6 @@ alias exa="exa -x --icons"
 alias ls="exa -x --icons"
 alias bat="bat --theme=gruvbox-dark"
 # alias btop="btop --utf-force"
-alias fzfz='~/.local/share/zinit/plugins/andrewferrier---fzf-z/fzfz'
-alias gg='cd $(fzfz)'
 alias v='nvim'
 alias vc='nvim ~/Coding'
 alias vn='nvim ~/Documents/notes/index.md'
@@ -115,9 +113,8 @@ alias cn='cd ~/Documents/notes'
 alias make='make -j$(nproc)'
 alias touhou6="cd ~/Games/Touhou\ 6\ \ -\ The\ Embodiment\ of\ Scarlet\ Devil/ && LANG=ja_JP.UTF-8 wine thprac\ v2.0.8.3.exe"
 alias xgo='xdg-open'
-alias krita='krita'
 alias kcli='kdeconnect-cli -n M2012K11AG'
-alias sgcc=" g++ -Werror -pedantic-errors -ggdb -Wall -Weffc++ -Wextra -Wsign-conversion -std=c++20"
+alias sgcc="g++ -Werror -pedantic-errors -ggdb -Wall -Weffc++ -Wextra -Wsign-conversion -std=c++20"
 
 #-------VARIABLES-------
 export notes="/home/petarch/Documents/notes"
