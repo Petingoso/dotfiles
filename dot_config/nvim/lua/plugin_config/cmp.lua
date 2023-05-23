@@ -32,6 +32,11 @@ cmp.setup({
         { name = "nvim_lsp", priority = 9 },
         { name = "nvim-lua" },
         { name = "path" },
+        { name = "kitty",
+                option = {
+		    listen_on = "/tmp/kitty*",
+		          }
+        },
         { name = 'spell',
                 priority = -1,
                 option = {
@@ -75,7 +80,7 @@ cmp.setup({
         end,
     },
     experimental = {
-        ghost_text = true,
+        ghost_text = false,
     },
     view = {
         entries = "custom",
@@ -93,8 +98,8 @@ local cmdline_mapping = {
     ["<C-p>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "c" }),
     ["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "c" }),
     ["<C-e>"] = cmp.mapping(cmp.mapping.close(), { "c" }),
-    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item()),["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item()),
-    ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item()),["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item()),
+    ["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item()),
+    ["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item()),
 }
 
 cmp.setup.cmdline(":", {

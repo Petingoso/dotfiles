@@ -24,20 +24,13 @@ end
 
 local formatterConfig = {
   lua = {
-    -- function()
-    --    return {
-    --      exe = "stylua",
-    --      args = {  "-" },
-    --      stdin = true,
-    --    }
-    --  end,
-    -- function()
-    --   return {
-    --     exe = "luafmt",
-    --     args = {"--indent-count", 2, "--stdin"},
-    --     stdin = true
-    --   }
-    -- end
+    function()
+       return {
+         exe = "stylua",
+         args = {  "-" },
+         stdin = true,
+       }
+     end,
   },
   rust = {
     -- -- Rustfmt

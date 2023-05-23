@@ -11,7 +11,7 @@ export WLR_NO_HARDWARE_CURSORS=1
 export WLR_BACKEND=vulkan
 export QT_QPA_PLATFORM=xcb
 export GDK_BACKEND=wayland
-export XWAYLAND_NO_GLAMOR=1
+# export XWAYLAND_NO_GLAMOR=1
 
 exec dbus-launch --sh-syntax --exit-with-session Hyprland
 
