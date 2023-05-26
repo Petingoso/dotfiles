@@ -31,14 +31,14 @@ change_theme()
 	cp ${rofi_dir}/$1.rasi ${rofi_dir}/colors.rasi
 	cp ${kitty_dir}/colorscheme/$1.conf ${kitty_dir}/color.thmswitch
 	cp ${waybar_dir}/all.css ${waybar_dir}/style.css
-	sed -i "s/\(colorscheme \)\(.*\)/\1$1]]/" $nvim_settings
+	sed -i 's/\(.*colorscheme\s*\)[^"]*/\1'"$1"'/' $nvim_settings
 if [[ "$1" == "cozy-night" ]]; then
 	# nvim
-	sed -i 's/\(colorscheme \)\(.*\)/\1tokyonight-night]]/' $nvim_settings
+	sed -i 's/\(.*colorscheme\s*\)[^"]*/\1'"tokyonight-night"'/' $nvim_settings
 
 elif [[ "$1" == "catppuccin_macchiato" ]]; then
 	# nvim
-	sed -i 's/\(colorscheme \)\(.*\)/\1catppuccin]]/' $nvim_settings
+	sed -i 's/\(.*colorscheme\s*\)[^"]*/\1'"catppuccin"'/' $nvim_settings
 
 elif [[ "$1" == "everforest" ]]; then
 	#waybar

@@ -47,7 +47,7 @@ local options = {
 	-- disables the -- INSERT -- line
 	showmode = false,
 
-	-- Set colorscheme
+	-- Set colorschemesolarized
 	termguicolors = true,
 
 	--enable spellchecking
@@ -94,9 +94,10 @@ vim.cmd([[let g:wiki_export = {
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
 
-vim.cmd([[colorscheme everforest]])
+vim.cmd("colorscheme solarized")
 
 -- vim.cmd([[augroup FormatAutogroup
 --   autocmd!
 --   autocmd BufWritePost * FormatWrite
 -- augroup END]])
+
