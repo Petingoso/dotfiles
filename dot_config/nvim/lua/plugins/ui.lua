@@ -41,20 +41,20 @@ local ui = {
 		config = function()
 			require("which-key").setup({})
 		end,
+	},
 
-		{ "kevinhwang91/rnvimr" },
+	{ "kevinhwang91/rnvimr" },
 
-		{
-			"nvim-neo-tree/neo-tree.nvim",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-				"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
-				"MunifTanjim/nui.nvim",
-			},
-			config = function()
-				require("plugins.configs.neo-tree")
-			end,
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
 		},
+		config = function()
+			require("plugins.configs.neo-tree")
+		end,
 	},
 
 	{
