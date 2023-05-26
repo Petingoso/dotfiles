@@ -6,9 +6,6 @@ softtabstop = 4,  --4 spaces for tab
 shiftwidth = 4,   --number of spaces for autoindent
 expandtab = true, --tabs to spaces
 
--- listchars:append('eol:'),
--- iskeyword:append "-", --add - to word recognition
-
 -- Set highlight on search
 hlsearch = true,   -- highlight all matches on previous search pattern
 incsearch = true,  -- highlight all matches on previous search pattern
@@ -98,7 +95,7 @@ vim.cmd [[let g:wiki_export = {
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
 
-vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme everforest]]
 
 -- vim.cmd([[augroup FormatAutogroup
 --   autocmd!
