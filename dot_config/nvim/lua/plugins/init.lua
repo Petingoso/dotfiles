@@ -6,4 +6,3 @@ local ui = require("plugins.ui")
 local plugins = { themes, ui, tools, editor }
 
 require("lazy").setup(plugins)
-

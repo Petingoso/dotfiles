@@ -98,7 +98,6 @@ map("n", "<C-Down>", splits.resize_down, { desc = "Resize split down" })
 map("n", "<C-Left>", splits.resize_left, { desc = "Resize split left" })
 map("n", "<C-Right>", splits.resize_right, { desc = "Resize split right" })
 
-
 -- Buffer and Tab management
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Previous buffer" })

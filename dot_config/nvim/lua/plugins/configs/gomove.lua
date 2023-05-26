@@ -1,4 +1,4 @@
-require("gomove").setup {
-  map_defaults = false,
-  reindent = true
-}
+require("gomove").setup({
+	map_defaults = false,
+	reindent = true,
+})

@@ -1,5 +1,5 @@
 local themes = {
-    	-- Themes
+	-- Themes
 	{ "catppuccin/nvim", name = "catppuccin" },
 	{ "rose-pine/neovim" },
 	{ "shaunsingh/nord.nvim" },
@@ -10,7 +10,6 @@ local themes = {
 	{ "roosta/srcery" },
 
 	{ "xiyaowong/nvim-transparent" },
-
 }
 
 return themes
