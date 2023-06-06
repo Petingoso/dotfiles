@@ -26,6 +26,7 @@ map("n", "<leader>zm", ":TZMinimalist<CR>", { desc = "Toggle Minimal Zen Mode" }
 map("n", "<leader>e", ":RnvimrToggle<CR>", { desc = "Toggle Explorer" })
 map("t", "<leader>e", "<C-Bslash><C-n>:RnvimrToggle<CR>", { desc = "Toggle Explorer from window" })
 map("n", "<leader>o", ":NeoTreeFocusToggle<CR>", { desc = "Toggle NeoTree" })
+map("n", "<C-c>", ":Alpha<CR>", { silent = true, desc = "Return to Dashboard" })
 
 --format
 map("n", "<localleader>f", ":Format<CR>", { desc = "Call Formatter" })
@@ -68,7 +69,7 @@ map("n", "<leader>f", vim.diagnostic.open_float, { desc = "Open diagnostic windo
 map("n", "<S-h>", "<Plug>GoNSMLeft", {})
 map("n", "<S-j>", "<Plug>GoNSMDown", {})
 map("n", "<S-k>", "<Plug>GoNSMUp", {})
-map("n", "<S-l>", "<Plug>GoNSMRight", {})
+map("n", "<S-l>", "<Plug>GoNSMRght", {})
 
 map("x", "<S-h>", "<Plug>GoVSMLeft", {})
 map("x", "<S-j>", "<Plug>GoVSMDown", {})
