@@ -135,7 +135,7 @@ case $select in
 		swaybg -m fill -i $HOME/.config/wallpaper/anime/wondering.jpg &
 		wal -i $HOME/.config/wallpaper/anime/wondering.jpg -n -s -t	
 		change_theme rose-pine
-		change_gtk_theme rose-pine-gtk
+		change_gtk_theme RosePine-Main-B
 		$HOME/scripts/gtk2gsetting.sh
 		sed -i -e 's/"workbench.colorTheme": ".*"/"workbench.colorTheme": "Rosé Pine Dawm"/g' "$HOME/.config/VSCodium/User/settings.json"
 

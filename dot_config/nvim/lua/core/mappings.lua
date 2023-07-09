@@ -19,6 +19,7 @@ map("v", "<leader>p", '"_dP', { silent = true, desc = "Paste from non cut" })
 
 map("n", "<F11>", ":set spell!<cr>", { silent = true, desc = "Toggle spell" })
 map("i", "<F11>", "<C-O>:set spell!<cr>", { silent = true })
+map("n", "<F3>", ":noh<cr>", {silent = true, desc ="Remove last highlited search"})
 
 --Toggle Terminal, Explorer,...
 map({ "n", "v", "t" }, "<C-t>", "<C-Bslash><C-N>:FloatermToggle<CR>", { desc = "Toggle Terminal" })
@@ -26,7 +27,6 @@ map("n", "<leader>zm", ":TZMinimalist<CR>", { desc = "Toggle Minimal Zen Mode" }
 map("n", "<leader>e", ":RnvimrToggle<CR>", { desc = "Toggle Explorer" })
 map("t", "<leader>e", "<C-Bslash><C-n>:RnvimrToggle<CR>", { desc = "Toggle Explorer from window" })
 map("n", "<leader>o", ":NeoTreeFocusToggle<CR>", { desc = "Toggle NeoTree" })
-map("n", "<C-c>", ":Alpha<CR>", { silent = true, desc = "Return to Dashboard" })
 
 --format
 map("n", "<localleader>f", ":Format<CR>", { desc = "Call Formatter" })

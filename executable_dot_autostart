@@ -7,12 +7,14 @@ export SDL_IM_MODULE=fcitx
 export QT_QPA_PLATFORMTHEME="kvantum"
 # QT_XCB_TABLET_LEGACY_COORDINATES=1
 export XDG_CURRENT_DESKTOP=sway
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 pcloud1 & # cloud service
 xss-lock gtklock & # locking app
 swaync & # notif center
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 & # polkit authenticaton
-# fcitx5 & # japanese input 
+fcitx5 & # japanese input 
 wl-clip-persist --clipboard regular & #persistent clipboard?
 /usr/lib/kdeconnectd & #kdeconnect daemon
 
