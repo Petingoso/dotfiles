@@ -57,7 +57,7 @@ local options = {
 	spelllang = { "en", "pt", "cjk" },
 
 	--set conceallevel, hide some stuff
-	conceallevel = 1,
+	-- conceallevel = 1,
 
 	completeopt = { "menuone", "noselect" }, -- mostly just for cmp_luasnip
 }

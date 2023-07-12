@@ -32,6 +32,14 @@ local formatterConfig = {
 			}
 		end,
 	},
+	sh = {
+		function ()
+			return{
+				exe = "beautysh",
+				args = { "-t" },
+			}
+		end,
+	},
 	rust = {
 		-- -- Rustfmt
 		-- function()

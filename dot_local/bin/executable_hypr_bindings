@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/style-2.rasi"
+prompt="rofi -dmenu -theme ~/.config/rofi/launchers/type-1/menu.rasi"
 
 option="
 

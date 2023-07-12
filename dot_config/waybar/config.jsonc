@@ -1,6 +1,6 @@
 {
     "position": "left",
-    "modules-left": ["custom/void","wlr/workspaces"],
+    "modules-left": ["custom/icon","wlr/workspaces"],
     "modules-right": [ "custom/notification", "tray", "battery", "custom/separator", "clock", "custom/power"],
     "wlr/workspaces": {
     	"all-outputs": true,
@@ -33,9 +33,9 @@
     },
     "clock": {
         "format": "{:%H\n%M}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
-    "custom/void": {
+    "custom/icon": {
 	"format": "",
 	"on-click": "~/.config/rofi/scripts/launcher_t1"
     },
@@ -56,7 +56,7 @@
     "notification": " ",
     "none": " ",
     "dnd-notification": " <span foreground='red'><sup></sup></span>",
-    "dnd-none": " ",
+    "dnd-none": " "
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -66,7 +66,7 @@
     "escape": true
 	},
     "tray": {
-	"show-passive-items": true,
+	"show-passive-items": true
 	}
     }
 }
