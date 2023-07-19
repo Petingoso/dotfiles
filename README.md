@@ -15,7 +15,7 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  ## Dependencies
  This is not an intensive list but here's a reference
  
- Main setup: `wayland, hyprland-waybar-git, swaync, swaybg, waybar(patch for hyprland, check wiki), libinput-gestures-setup, grim, slur, swappy, wl-copy, rofi-lbonn-wayland, gammmastep, gtklock`
+ Main setup: `wayland, hyprland-waybar-git, swaync, swaybg, grim, slur, swappy, wl-copy, wl-copy-persist, rofi-lbonn-wayland, wl-gammarelay-rs, gtklock`
   
 Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, gnome-polkit, pulseaudio, light, ranger, firefox, python-pywalfox, python-pywal`
   
