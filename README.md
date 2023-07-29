@@ -15,11 +15,10 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  ## Dependencies
  This is not an intensive list but here's a reference
  
-<<<<<<< HEAD
  Main setup: 
  - waybar-hyprland-git: Bar (duh)
  - swaync sway idle (notification center and autolocking)
-  - gtklock (locker util, I also have playerctl module)
+ - gtklock (locker util, I also have playerctl module)
  - hyprshade (bluelight filter + shader manager)
  - playerctl, light (manage sound and brightness)
  - grim, slurp, swappy (screenshottting)
@@ -32,10 +31,7 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  - firefox,python-pywalfox, python-pywal (firefox and auto firefox theming)
  - pcloud, bitwarden, kdeconnect (general utils)
  - fcitx5 (input method) 
-=======
- Main setup: `wayland, hyprland-waybar-git, swaync, swaybg, grim, slur, swappy, wl-copy, wl-copy-persist, rofi-lbonn-wayland, wl-gammarelay-rs, gtklock`
->>>>>>> f789ca16c2b40abe666423af121829612698e951
-  
+
   That should be about it. 
 ## I think it looks really cool but most of it is stolen so credits to
 - ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
