@@ -16,6 +16,7 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  This is not an intensive list but here's a reference
  
  Main setup: 
+ - hyprland (compositor obvs)
  - waybar-hyprland-git: Bar (duh)
  - swaync sway idle (notification center and autolocking)
  - gtklock (locker util, I also have playerctl module)
