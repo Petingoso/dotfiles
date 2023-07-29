@@ -15,11 +15,24 @@ It's wayland only but you can find old X11 configs on the commit history (spaghe
  ## Dependencies
  This is not an intensive list but here's a reference
  
- Main setup: `wayland, hyprland-waybar-git, swaync, swaybg, waybar(patch for hyprland, check wiki), libinput-gestures-setup, grim, slur, swappy, wl-copy, rofi-lbonn-wayland, gammmastep, gtklock`
+ Main setup: 
+ - waybar-hyprland-git: Bar (duh)
+ - swaync sway idle (notification center and autolocking)
+  - gtklock (locker util, I also have playerctl module)
+ - hyprshade (bluelight filter + shader manager)
+ - playerctl, light (manage sound and brightness)
+ - grim, slurp, swappy (screenshottting)
+ - rofi-lbonn-wayland (rofi with wayland patch, app picker)
+ - dbus, gnome-polkit, wayland, wl-copy and wl-clip-persist (for general wayland stuff)
+ - neovim (editor)
+ - kitty (terminal emulator)
+ - fzf, zsh and zinit (shell)
+ - ranger and nemo + nemo-filleroller (file managers)
+ - firefox,python-pywalfox, python-pywal (firefox and auto firefox theming)
+ - pcloud, bitwarden, kdeconnect (general utils)
+ - fcitx5 (input method) 
   
-Misc applications (many complementary): `dbus, kitty, keepassxc, pcloud, nvim, gnome-polkit, pulseaudio, light, ranger, firefox, python-pywalfox, python-pywal`
-  
-  That should be about it.
+  That should be about it. 
 ## I think it looks really cool but most of it is stolen so credits to
 - ~~https://gitlab.com/brokenbyte/dotfiles/-/tree/master for the some of the nvim configs~~ jokes on you it's now basically all mine now
 - ~~https://github.com/lauroro/hyprland-dotfiles (old config)~~ https://github.com/justleoo/dotfiles for most of the waybar config
