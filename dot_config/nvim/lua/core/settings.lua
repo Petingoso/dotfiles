@@ -47,7 +47,7 @@ local options = {
 	-- disables the -- INSERT -- line
 	showmode = false,
 
-	-- Set colorschemegruvbox
+	-- Set colorschemeeverforest
 	termguicolors = true,
 
 	--enable spellchecking
@@ -94,7 +94,7 @@ vim.cmd([[let g:wiki_export = {
 --set pairs on vim pairs
 vim.g.AutoPairsMapBS = 1
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme everforest")
 
 -- vim.cmd([[augroup FormatAutogroup
 --   autocmd!

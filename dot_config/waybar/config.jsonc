@@ -1,8 +1,8 @@
 {
     "position": "left",
-    "modules-left": ["custom/icon","wlr/workspaces"],
+    "modules-left": ["custom/icon","hyprland/workspaces"],
     "modules-right": [ "custom/notification", "tray", "battery", "custom/separator", "clock", "custom/power"],
-    "wlr/workspaces": {
+    "hyprland/workspaces": {
     	"all-outputs": true,
 	"on-click": "activate",
 	"format": "{icon}",
